@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import PainPointsSection from "./components/PainPointsSection";
 import AISearchSection from "./components/AISearchSection";
 import InteractiveDiagnostic from "./components/InteractiveDiagnostic";
 import DeliverablesChecklist from "./components/DeliverablesChecklist";
@@ -26,6 +27,8 @@ export default function Home() {
       <Navbar onOpenModal={handleOpenModal} />
       
       <Hero onOpenModal={handleOpenModal} />
+
+      <PainPointsSection onOpenModal={handleOpenModal} />
       
       <AISearchSection />
       

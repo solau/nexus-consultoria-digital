@@ -1,38 +1,38 @@
 export const softwarePlatforms = [
   {
-    id: "kommo",
-    name: "Kommo CRM (antigo AmoCRM)",
-    category: "CRM de Vendas & WhatsApp",
-    benefit: "35% a 50% de Comissão Recorrente Mensal",
-    description: "O melhor CRM para gestão de vendas pelo WhatsApp e Instagram. Organiza orçamentos em colunas visuais e automatiza o envio de mensagens de cobrança e acompanhamento.",
-    badge: "Parceiro Oficial",
+    id: "crm_executive",
+    name: "Ecossistema de CRM & Automação de Vendas",
+    category: "Gestão Comercial & WhatsApp",
+    benefit: "Solução Homologada DS IA",
+    description: "Plataforma avançada para gestão de orçamentos e atendimentos no WhatsApp em colunas visuais, garantindo o acompanhamento de 100% dos leads sem perdas de vendas.",
+    badge: "Alta Conversão",
     popular: true
   },
   {
-    id: "bling",
-    name: "Bling ERP",
+    id: "erp_executive",
+    name: "Sistema Integrado ERP & Emissão Fiscal",
     category: "Gestão, Nota Fiscal & Estoque",
-    benefit: "Comissão de Afiliado + 20% no Setup do Parceiro",
-    description: "Sistema completo de emissão de NF-e/NFC-e, controle de estoque, cadastro de produtos e integração com e-commerce e Mercado Livre. Inclui cupom de 4 meses grátis para seu cliente.",
-    badge: "Indicação ERP",
+    benefit: "Implantação Certificada",
+    description: "Sistema completo de emissão de NF-e/NFC-e, controle de estoque em tempo real, cadastro de produtos e integração direta com canais de vendas digitais.",
+    badge: "Gestão 360°",
     popular: true
   },
   {
-    id: "pipedrive",
-    name: "Pipedrive CRM",
-    category: "Vendas B2B & Alto Ticket",
-    benefit: "20% a 33% de Comissão Recorrente",
-    description: "CRM de padrão global focado em vendas complexas, escritórios de advocacia, consultorias e negociações de alto valor com gestão de propostas.",
-    badge: "B2B & Alto Ticket",
+    id: "b2b_crm",
+    name: "Plataforma de Gestão B2B & Alto Ticket",
+    category: "Vendas Complexas & Contratos",
+    benefit: "Padrão Corporativo",
+    description: "Estrutura dedicada a escritórios de advocacia, consultorias e negociações B2B de alto valor com gestão de propostas e acompanhamento de reuniões.",
+    badge: "B2B Executivo",
     popular: false
   },
   {
-    id: "contaazul",
-    name: "Conta Azul ERP",
-    category: "Gestão Financeira & Serviços",
-    benefit: "Comissão de Parceiro + 20% no BPO Financeiro",
-    description: "Plataforma de gestão de fluxo de caixa, conciliação bancária automatizada e emissão de notas fiscais de serviço para clínicas e consultórios.",
-    badge: "Gestão PMEs",
+    id: "finance_erp",
+    name: "Gestão Financeira & Conciliação PMEs",
+    category: "Fluxo de Caixa & Finanças",
+    benefit: "Automação Bancária",
+    description: "Plataforma de controle financeiro automatizado, fluxo de caixa em tempo real e conciliação bancária para clínicas, consultórios e prestadores de serviço.",
+    badge: "Finanças PMEs",
     popular: false
   }
 ];

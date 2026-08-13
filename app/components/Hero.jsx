@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles, ArrowRight, ShieldCheck, Cpu, TrendingUp, CheckCircle2 } from "lucide-react";
+import { Cpu, ArrowRight, ShieldCheck, CheckCircle2 } from "lucide-react";
 
 export default function Hero({ onOpenModal }) {
   return (
@@ -17,8 +17,8 @@ export default function Hero({ onOpenModal }) {
         
         <div style={{ maxWidth: "880px", margin: "0 auto", textAlign: "center" }}>
           
-          <div className="badge-gold" style={{ margin: "0 auto 24px auto" }}>
-            <Sparkles size={16} /> Consultoria Executiva de Presença Digital & IA
+          <div className="badge-blue" style={{ margin: "0 auto 24px auto" }}>
+            <Cpu size={16} /> DS IA — Digital Strategy & Artificial Intelligence
           </div>
 
           <h1 style={{
@@ -28,7 +28,7 @@ export default function Hero({ onOpenModal }) {
             marginBottom: "24px",
             letterSpacing: "-0.03em"
           }}>
-            Transformamos a Presença Digital da sua empresa em uma <span className="gold-text">Máquina Previsível de Lucros</span> e Recomendação em IAs
+            Transformamos a Presença Digital da sua empresa em uma <span className="cyan-text">Máquina Previsível de Lucros</span> e Recomendação em IAs
           </h1>
 
           <p style={{
@@ -39,16 +39,16 @@ export default function Hero({ onOpenModal }) {
             maxWidth: "760px",
             margin: "0 auto 40px auto"
           }}>
-            Identificamos os vazamentos de faturamento do seu negócio com nosso <strong>Diagnóstico Executivo Pago</strong>, construímos seu <strong>Site de Alta Velocidade otimizado para o ChatGPT/Google</strong> e direcionamos nossa rede de parceiros em tráfego e vendas.
+            Identificamos os vazamentos de faturamento do seu negócio com nosso <strong>Diagnóstico Executivo Pago</strong>, construímos seu <strong>Site de Alta Velocidade otimizado para o ChatGPT/Google</strong> e direcionamos nosso ecossistema de soluções de alta conversão.
           </p>
 
           {/* CTA Group */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
-            <button className="btn-gold" onClick={onOpenModal} style={{ fontSize: "1.1rem", padding: "18px 36px" }}>
+            <button className="btn-blue" onClick={onOpenModal} style={{ fontSize: "1.1rem", padding: "18px 36px" }}>
               Agendar Diagnóstico Executivo (R$ 297) <ArrowRight size={20} />
             </button>
             <a href="#simulador" className="btn-outline" style={{ fontSize: "1.1rem", padding: "18px 36px" }}>
-              Fazer Simulador Gratuito
+              Fazer Simulador de Lucro Prévio
             </a>
           </div>
 
@@ -58,23 +58,23 @@ export default function Hero({ onOpenModal }) {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "24px",
-            background: "rgba(16, 18, 24, 0.6)",
+            background: "rgba(11, 19, 38, 0.7)",
             backdropFilter: "blur(12px)",
             padding: "28px 32px",
             borderRadius: "var(--radius-md)",
-            border: "1px solid var(--border-glass)"
+            border: "1px solid rgba(0, 242, 254, 0.2)"
           }}>
             <div style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--gold-light)" }}>+180%</div>
-              <div style={{ fontSize: "0.875rem", color: "var(--text-muted)", marginTop: "4px" }}>Aumento Médio de Leads Qualificados</div>
+              <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--blue-cyan)" }}>+180%</div>
+              <div style={{ fontSize: "0.875rem", color: "var(--text-muted)", marginTop: "4px" }}>Aumento Médio em Vendas Qualificadas</div>
             </div>
             <div style={{ textAlign: "center", borderLeft: "1px solid var(--border-glass)", borderRight: "1px solid var(--border-glass)" }}>
               <div style={{ fontSize: "2rem", fontWeight: 800, color: "#fff" }}>ChatGPT & SGE</div>
-              <div style={{ fontSize: "0.875rem", color: "var(--text-muted)", marginTop: "4px" }}>Recomendação Ativa em IA Search</div>
+              <div style={{ fontSize: "0.875rem", color: "var(--text-muted)", marginTop: "4px" }}>Recomendação Ativa nos Motores de IA</div>
             </div>
             <div style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--gold-light)" }}>85%</div>
-              <div style={{ fontSize: "0.875rem", color: "var(--text-muted)", marginTop: "4px" }}>Retenção Anual de Clientes Satisfeitos</div>
+              <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--blue-light)" }}>85%</div>
+              <div style={{ fontSize: "0.875rem", color: "var(--text-muted)", marginTop: "4px" }}>Retenção Mensal de Empresas Parceiras</div>
             </div>
           </div>
 
@@ -90,13 +90,13 @@ export default function Hero({ onOpenModal }) {
             color: "var(--text-muted)"
           }}>
             <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <CheckCircle2 size={18} color="var(--gold-primary)" /> Sem contrato de fidelidade abusivo
+              <CheckCircle2 size={18} color="var(--blue-cyan)" /> Sem fidelidade abusiva
             </span>
             <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <CheckCircle2 size={18} color="var(--gold-primary)" /> Site próprio + Hospedagem SSL inclusa
+              <CheckCircle2 size={18} color="var(--blue-cyan)" /> Site Próprio + Hospedagem SSL inclusa
             </span>
             <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <CheckCircle2 size={18} color="var(--gold-primary)" /> Rede de 8 Parceiros Homologados
+              <CheckCircle2 size={18} color="var(--blue-cyan)" /> Soluções Certificadas Homologadas
             </span>
           </div>
 

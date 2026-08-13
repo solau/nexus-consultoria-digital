@@ -1,10 +1,10 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Nexus Digital Growth — Consultoria de Presença Digital & IA",
+  title: "DS IA — Digital Strategy & Artificial Intelligence",
   description: "Diagnóstico Executivo de Presença Digital, desenvolvimento e manutenção de sites de alta velocidade e otimização contínua para Inteligências Artificiais (ChatGPT, Perplexity, Gemini, Google SGE).",
-  keywords: ["consultoria presença digital", "otimização para IA", "ChatGPT empresa", "desenvolvimento de sites", "diagnóstico empresarial", "Bling ERP", "Kommo CRM"],
-  authors: [{ name: "Nexus Digital Growth" }],
+  keywords: ["consultoria presença digital", "otimização para IA", "ChatGPT empresa", "desenvolvimento de sites", "diagnóstico empresarial", "DS IA"],
+  authors: [{ name: "DS IA" }],
   viewport: "width=device-width, initial-scale=1.0",
 };
 
@@ -14,8 +14,8 @@ export default function RootLayout({ children }) {
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Nexus Digital Growth — Consultoria de Presença Digital & IA",
-      "image": "https://nexusdigitalgrowth.com.br/logo.png",
+      "name": "DS IA — Digital Strategy & Artificial Intelligence",
+      "image": "https://dsia.com.br/logo.png",
       "description": "Consultoria e assessoria executiva de tecnologia web, diagnóstico empresarial e otimização técnica para Inteligências Artificiais (ChatGPT, Perplexity, Google SGE).",
       "telephone": "+55-71-99999-9999",
       "priceRange": "$$$",
@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "128",
+        "reviewCount": "142",
         "bestRating": "5",
         "worstRating": "1"
       }

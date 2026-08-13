@@ -12,18 +12,18 @@ export default function FAQAccordion() {
   };
 
   return (
-    <section className="section-padding" style={{ background: "#0c0e14" }}>
+    <section className="section-padding" style={{ background: "#080d1a" }}>
       <div className="container">
         
         <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px auto" }}>
-          <div className="badge-gold">
-            <HelpCircle size={16} /> FAQ Executivo
+          <div className="badge-blue">
+            <HelpCircle size={16} /> FAQ Executivo DS IA
           </div>
           <h2 style={{ fontSize: "2.5rem", fontWeight: 800, marginBottom: "16px" }}>
-            Perguntas <span className="gold-text">Frequentes</span>
+            Perguntas <span className="cyan-text">Frequentes</span>
           </h2>
           <p style={{ color: "var(--text-muted)", fontSize: "1.1rem" }}>
-            Tire suas dúvidas sobre a consultoria, o diagnóstico e a tecnologia de IA.
+            Tire suas dúvidas sobre a consultoria, o diagnóstico executivo e a tecnologia de IA.
           </p>
         </div>
 
@@ -37,15 +37,15 @@ export default function FAQAccordion() {
                 style={{
                   padding: "24px",
                   cursor: "pointer",
-                  border: isOpen ? "1px solid var(--border-gold)" : "1px solid var(--border-glass)"
+                  border: isOpen ? "1px solid var(--border-cyan)" : "1px solid var(--border-glass)"
                 }}
                 onClick={() => toggle(idx)}
               >
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                  <h3 style={{ fontSize: "1.15rem", color: isOpen ? "var(--gold-light)" : "#fff", fontWeight: 700 }}>
+                  <h3 style={{ fontSize: "1.15rem", color: isOpen ? "var(--blue-cyan)" : "#fff", fontWeight: 700 }}>
                     {faq.question}
                   </h3>
-                  {isOpen ? <ChevronUp size={20} color="var(--gold-primary)" /> : <ChevronDown size={20} color="var(--text-muted)" />}
+                  {isOpen ? <ChevronUp size={20} color="var(--blue-cyan)" /> : <ChevronDown size={20} color="var(--text-muted)" />}
                 </div>
 
                 {isOpen && (

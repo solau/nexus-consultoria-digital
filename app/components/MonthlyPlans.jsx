@@ -9,11 +9,11 @@ export default function MonthlyPlans({ onOpenModal }) {
       <div className="container">
         
         <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px auto" }}>
-          <div className="badge-gold">
-            <Star size={16} /> Planos Mensais Recorrentes
+          <div className="badge-blue">
+            <Star size={16} /> Planos Mensais Recorrentes DS IA
           </div>
           <h2 style={{ fontSize: "2.5rem", fontWeight: 800, marginBottom: "16px" }}>
-            Investimento Transparente em <span className="gold-text">Tecnologia & IA</span>
+            Investimento Transparente em <span className="cyan-text">Tecnologia & IA</span>
           </h2>
           <p style={{ color: "var(--text-muted)", fontSize: "1.1rem" }}>
             Desenvolvimento do site, hospedagem de alta velocidade, infraestrutura contínua de IA e acompanhamento executivo.
@@ -30,9 +30,9 @@ export default function MonthlyPlans({ onOpenModal }) {
                 display: "flex",
                 flexDirection: "column",
                 position: "relative",
-                border: pkg.highlight ? "2px solid var(--gold-primary)" : "1px solid var(--border-glass)",
-                background: pkg.highlight ? "rgba(217, 179, 64, 0.05)" : "var(--bg-glass)",
-                boxShadow: pkg.highlight ? "var(--shadow-gold)" : "none"
+                border: pkg.highlight ? "2px solid var(--blue-cyan)" : "1px solid var(--border-glass)",
+                background: pkg.highlight ? "rgba(37, 99, 235, 0.1)" : "var(--bg-glass)",
+                boxShadow: pkg.highlight ? "var(--shadow-blue)" : "none"
               }}
             >
               {pkg.badge && (
@@ -40,8 +40,8 @@ export default function MonthlyPlans({ onOpenModal }) {
                   position: "absolute",
                   top: "-16px",
                   right: "24px",
-                  background: pkg.highlight ? "var(--gold-gradient)" : "rgba(255,255,255,0.1)",
-                  color: pkg.highlight ? "#08090c" : "#fff",
+                  background: pkg.highlight ? "var(--blue-gradient)" : "rgba(255,255,255,0.1)",
+                  color: "#ffffff",
                   padding: "4px 16px",
                   borderRadius: "var(--radius-full)",
                   fontSize: "0.8rem",
@@ -60,9 +60,9 @@ export default function MonthlyPlans({ onOpenModal }) {
               </p>
 
               <div style={{ marginBottom: "24px", paddingBottom: "24px", borderBottom: "1px solid var(--border-glass)" }}>
-                <span style={{ fontSize: "3rem", fontWeight: 900, color: "var(--gold-light)" }}>{pkg.price}</span>
+                <span style={{ fontSize: "3rem", fontWeight: 900, color: "var(--blue-cyan)" }}>{pkg.price}</span>
                 <span style={{ fontSize: "1rem", color: "var(--text-muted)" }}>{pkg.period}</span>
-                <span style={{ display: "block", fontSize: "0.85rem", color: "var(--gold-primary)", marginTop: "6px", fontWeight: 600 }}>
+                <span style={{ display: "block", fontSize: "0.85rem", color: "var(--blue-light)", marginTop: "6px", fontWeight: 600 }}>
                   + {pkg.setup}
                 </span>
               </div>
@@ -70,8 +70,8 @@ export default function MonthlyPlans({ onOpenModal }) {
               <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "14px", marginBottom: "40px", flexGrow: 1 }}>
                 {pkg.features.map((feat, idx) => (
                   <li key={idx} style={{ display: "flex", alignItems: "flex-start", gap: "12px", fontSize: "0.95rem", color: "var(--text-main)", lineHeight: 1.4 }}>
-                    <div style={{ background: "rgba(217,179,64,0.2)", borderRadius: "50%", padding: "2px", flexShrink: 0, marginTop: "2px" }}>
-                      <Check size={14} color="var(--gold-primary)" />
+                    <div style={{ background: "rgba(0, 242, 254, 0.2)", borderRadius: "50%", padding: "2px", flexShrink: 0, marginTop: "2px" }}>
+                      <Check size={14} color="var(--blue-cyan)" />
                     </div>
                     <span>{feat}</span>
                   </li>
@@ -79,7 +79,7 @@ export default function MonthlyPlans({ onOpenModal }) {
               </ul>
 
               <button
-                className={pkg.highlight ? "btn-gold" : "btn-outline"}
+                className={pkg.highlight ? "btn-blue" : "btn-outline"}
                 onClick={onOpenModal}
                 style={{ width: "100%", justifyContent: "center" }}
               >
