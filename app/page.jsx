@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import PainPointsSection from "./components/PainPointsSection";
 import AISearchSection from "./components/AISearchSection";
+import RegionalCoverage from "./components/RegionalCoverage";
 import InteractiveDiagnostic from "./components/InteractiveDiagnostic";
 import DeliverablesChecklist from "./components/DeliverablesChecklist";
 import MonthlyPlans from "./components/MonthlyPlans";
@@ -32,6 +33,10 @@ export default function Home() {
       
       <div id="tecnologia-ia">
         <AISearchSection />
+      </div>
+
+      <div id="cobertura-regional">
+        <RegionalCoverage onOpenModal={handleOpenModal} />
       </div>
       
       <div id="diagnostico">
