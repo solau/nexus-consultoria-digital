@@ -27,25 +27,41 @@ export default function Home() {
       
       <Hero onOpenModal={handleOpenModal} />
 
-      <PainPointsSection onOpenModal={handleOpenModal} />
+      <div id="dores">
+        <PainPointsSection onOpenModal={handleOpenModal} />
+      </div>
       
-      <AISearchSection />
+      <div id="tecnologia-ia">
+        <AISearchSection />
+      </div>
       
       <div id="diagnostico">
         <InteractiveDiagnostic onOpenModal={handleOpenModal} />
       </div>
 
-      <DeliverablesChecklist />
+      <div id="entregaveis">
+        <DeliverablesChecklist />
+      </div>
 
-      <MonthlyPlans onOpenModal={handleOpenModal} />
+      <div id="assessoria">
+        <MonthlyPlans onOpenModal={handleOpenModal} />
+      </div>
 
-      <SoftwareHubSection onOpenModal={handleOpenModal} />
+      <div id="sistemas">
+        <SoftwareHubSection onOpenModal={handleOpenModal} />
+      </div>
 
-      <PartnerHub onOpenModal={handleOpenModal} />
+      <div id="solucoes-certificadas">
+        <PartnerHub onOpenModal={handleOpenModal} />
+      </div>
 
-      <NicheShowcase onOpenModal={handleOpenModal} />
+      <div id="nichos">
+        <NicheShowcase onOpenModal={handleOpenModal} />
+      </div>
 
-      <FAQAccordion />
+      <div id="faq">
+        <FAQAccordion />
+      </div>
 
       <Footer onOpenModal={handleOpenModal} />
 

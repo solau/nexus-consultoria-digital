@@ -46,15 +46,16 @@ export default function Navbar({ onOpenModal }) {
         </a>
 
         {/* Desktop Menu */}
-        <nav className="desktop-menu" style={{ display: "flex", alignItems: "center", gap: "32px" }}>
-          <a href="#diagnostico" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.95rem", fontWeight: "500", transition: "color 0.2s" }}>Diagnóstico Executivo</a>
-          <a href="#ia-search" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.95rem", fontWeight: "500", transition: "color 0.2s" }}>Tecnologia IA</a>
-          <a href="#planos" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.95rem", fontWeight: "500", transition: "color 0.2s" }}>Planos Mensais</a>
-          <a href="#softwares" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.95rem", fontWeight: "500", transition: "color 0.2s" }}>Sistemas CRM & ERP</a>
-          <a href="#parceiros" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.95rem", fontWeight: "500", transition: "color 0.2s" }}>Soluções Certificadas</a>
+        <nav className="desktop-menu" style={{ display: "flex", alignItems: "center", gap: "24px" }}>
+          <a href="#diagnostico" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.92rem", fontWeight: "500", transition: "color 0.2s" }}>Diagnóstico</a>
+          <a href="#entregaveis" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.92rem", fontWeight: "500", transition: "color 0.2s" }}>Entregáveis</a>
+          <a href="#tecnologia-ia" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.92rem", fontWeight: "500", transition: "color 0.2s" }}>Tecnologia IA</a>
+          <a href="#assessoria" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.92rem", fontWeight: "500", transition: "color 0.2s" }}>Assessoria Growth</a>
+          <a href="#sistemas" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.92rem", fontWeight: "500", transition: "color 0.2s" }}>Sistemas CRM & ERP</a>
+          <a href="#solucoes-certificadas" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.92rem", fontWeight: "500", transition: "color 0.2s" }}>Soluções Certificadas</a>
         </nav>
 
-        {/* CTA Button */}
+        {/* CTA Button & Mobile Toggle */}
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
           <button className="btn-blue" onClick={onOpenModal} style={{ padding: "10px 22px", fontSize: "0.9rem" }}>
             Agendar Diagnóstico <ArrowRight size={16} />
@@ -71,8 +72,27 @@ export default function Navbar({ onOpenModal }) {
 
       </div>
 
+      {/* Mobile Drawer */}
+      {mobileOpen && (
+        <div style={{
+          background: "#080d1a",
+          borderBottom: "1px solid var(--border-cyan)",
+          padding: "24px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "16px"
+        }}>
+          <a href="#diagnostico" onClick={() => setMobileOpen(false)} style={{ color: "#fff", textDecoration: "none", fontSize: "1rem", fontWeight: "600" }}>Diagnóstico</a>
+          <a href="#entregaveis" onClick={() => setMobileOpen(false)} style={{ color: "#fff", textDecoration: "none", fontSize: "1rem", fontWeight: "600" }}>Entregáveis</a>
+          <a href="#tecnologia-ia" onClick={() => setMobileOpen(false)} style={{ color: "#fff", textDecoration: "none", fontSize: "1rem", fontWeight: "600" }}>Tecnologia IA</a>
+          <a href="#assessoria" onClick={() => setMobileOpen(false)} style={{ color: "#fff", textDecoration: "none", fontSize: "1rem", fontWeight: "600" }}>Assessoria Growth</a>
+          <a href="#sistemas" onClick={() => setMobileOpen(false)} style={{ color: "#fff", textDecoration: "none", fontSize: "1rem", fontWeight: "600" }}>Sistemas CRM & ERP</a>
+          <a href="#solucoes-certificadas" onClick={() => setMobileOpen(false)} style={{ color: "#fff", textDecoration: "none", fontSize: "1rem", fontWeight: "600" }}>Soluções Certificadas</a>
+        </div>
+      )}
+
       <style jsx>{`
-        @media (max-width: 900px) {
+        @media (max-width: 960px) {
           .desktop-menu {
             display: none !important;
           }

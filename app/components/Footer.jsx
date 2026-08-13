@@ -27,12 +27,15 @@ export default function Footer({ onOpenModal }) {
           </div>
 
           <div>
-            <h4 style={{ color: "#fff", fontSize: "1rem", marginBottom: "16px", fontWeight: 700 }}>Navegação</h4>
+            <h4 style={{ color: "#fff", fontSize: "1rem", marginBottom: "16px", fontWeight: 700 }}>Navegação Rápida</h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "10px", fontSize: "0.9rem" }}>
-              <li><a href="#diagnostico" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Diagnóstico Executivo</a></li>
-              <li><a href="#ia-search" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Tecnologia IA</a></li>
-              <li><a href="#planos" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Planos Mensais</a></li>
-              <li><a href="#softwares" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Sistemas CRM & ERP</a></li>
+              <li><a href="#diagnostico" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Diagnóstico (R$ 494)</a></li>
+              <li><a href="#entregaveis" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Entregáveis</a></li>
+              <li><a href="#tecnologia-ia" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Tecnologia IA</a></li>
+              <li><a href="#assessoria" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Assessoria Growth</a></li>
+              <li><a href="#sistemas" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Sistemas CRM & ERP</a></li>
+              <li><a href="#solucoes-certificadas" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Soluções Certificadas</a></li>
+              <li><a href="#faq" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Dúvidas Frequentes</a></li>
             </ul>
           </div>
 
