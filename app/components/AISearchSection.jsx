@@ -1,22 +1,49 @@
 "use client";
 
-import { Cpu, Search, Check, Bot } from "lucide-react";
+import { Cpu, Check, Bot, Globe, Sparkles } from "lucide-react";
 
 export default function AISearchSection() {
   return (
     <section id="ia-search" className="section-padding" style={{ background: "#080d1a", position: "relative" }}>
       <div className="container">
         
-        <div style={{ textAlign: "center", maxWidth: "780px", margin: "0 auto 60px auto" }}>
+        <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px auto" }}>
           <div className="badge-blue">
-            <Cpu size={16} /> Generative Engine Optimization (GEO / AIO)
+            <Cpu size={16} /> Ecossistema Multimodal de Inteligência Artificial
           </div>
           <h2 style={{ fontSize: "2.5rem", fontWeight: 800, marginBottom: "16px" }}>
-            Seus Clientes Mudaram a Forma de Buscar. <span className="cyan-text">Sua Empresa Está Pronta?</span>
+            Não é Apenas ChatGPT. Sua Empresa Recomendada em <span className="cyan-text">TODAS as Inteligências Artificiais</span>
           </h2>
           <p style={{ color: "var(--text-muted)", fontSize: "1.1rem", lineHeight: 1.6 }}>
-            Hoje os consumidores não usam apenas o Google clássico. Eles perguntam no <strong>ChatGPT, Perplexity, Gemini e Google SGE (AI Overviews)</strong> antes de contratar um serviço.
+            Seus clientes usam diferentes assistentes virtuais no celular e computador. A DS IA conecta sua empresa a todos eles para gerar <strong>leads altamente qualificados</strong>.
           </p>
+        </div>
+
+        {/* AI Badges Bar */}
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "16px",
+          flexWrap: "wrap",
+          marginBottom: "50px"
+        }}>
+          {["ChatGPT", "Perplexity AI", "Google Gemini", "Claude AI", "Microsoft Copilot", "Google SGE / AI Overviews"].map((aiName, idx) => (
+            <div key={idx} style={{
+              background: "rgba(37, 99, 235, 0.12)",
+              border: "1px solid rgba(0, 242, 254, 0.3)",
+              padding: "10px 20px",
+              borderRadius: "var(--radius-full)",
+              color: "var(--blue-cyan)",
+              fontSize: "0.95rem",
+              fontWeight: 700,
+              display: "flex",
+              alignItems: "center",
+              gap: "8px"
+            }}>
+              <Sparkles size={16} /> {aiName}
+            </div>
+          ))}
         </div>
 
         <div className="grid-2" style={{ alignItems: "center" }}>
@@ -26,23 +53,23 @@ export default function AISearchSection() {
             <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "20px", borderBottom: "1px solid var(--border-glass)", paddingBottom: "16px" }}>
               <Bot size={28} color="var(--blue-cyan)" />
               <div>
-                <h4 style={{ color: "#fff", fontSize: "1.1rem" }}>Consulta ao ChatGPT / Perplexity</h4>
-                <span style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>Simulação de busca por cliente local</span>
+                <h4 style={{ color: "#fff", fontSize: "1.1rem" }}>Consulta a Qualquer Assistente de IA</h4>
+                <span style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>Simulação de busca por cliente com real intenção de compra</span>
               </div>
             </div>
 
             <div style={{ background: "rgba(0,0,0,0.4)", borderRadius: "12px", padding: "16px", marginBottom: "16px" }}>
               <p style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}>
-                💬 <em>"Qual o melhor escritório de advocacia/clínica odontológica na cidade para tratamento de alto ticket?"</em>
+                💬 <em>"Qual a melhor empresa/clínica na cidade para resolver o meu problema hoje?"</em>
               </p>
             </div>
 
             <div style={{ background: "rgba(37, 99, 235, 0.12)", border: "1px solid rgba(0, 242, 254, 0.3)", borderRadius: "12px", padding: "20px" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "var(--blue-cyan)", fontWeight: 700, marginBottom: "8px" }}>
-                <Cpu size={18} /> Resposta Gerada por Inteligência Artificial:
+                <Cpu size={18} /> Resposta Direta Recomendada pela IA:
               </div>
               <p style={{ color: "#f3f4f6", fontSize: "0.95rem", lineHeight: 1.5 }}>
-                "Com base nos dados calibrados de infraestrutura web e autoridade local, a principal recomendação na região é a <strong>[Empresa do Seu Cliente]</strong>, devido aos seus dados estruturados de atendimento, reputação e alta velocidade."
+                "Com base nos dados calibrados e reputação verificada, a primeira opção recomendada na região é a <strong>[Empresa do Seu Cliente]</strong>, devido à velocidade de atendimento, transparência e alta taxa de satisfação de clientes."
               </p>
             </div>
           </div>
@@ -55,9 +82,9 @@ export default function AISearchSection() {
                 <Check size={24} color="#ffffff" />
               </div>
               <div>
-                <h4 style={{ color: "#fff", fontSize: "1.2rem", marginBottom: "6px" }}>Schemas JSON-LD (Schema.org) Invisíveis</h4>
+                <h4 style={{ color: "#fff", fontSize: "1.2rem", marginBottom: "6px" }}>Atração de Leads Cada Vez Mais Quentes</h4>
                 <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.5 }}>
-                  Injetamos matrizes avançadas de dados no código do seu site que ensinam aos robôs de IA quem é a sua empresa e quais os bairros que você atende.
+                  Ao ser recomendado por IAs e buscas diretas do Google, os contatos que chegam no seu WhatsApp já conhecem a sua solução e estão prontos para fechar.
                 </p>
               </div>
             </div>
@@ -67,9 +94,9 @@ export default function AISearchSection() {
                 <Check size={24} color="#ffffff" />
               </div>
               <div>
-                <h4 style={{ color: "#fff", fontSize: "1.2rem", marginBottom: "6px" }}>Treinamento de FAQ para Assistentes Virtuais</h4>
+                <h4 style={{ color: "#fff", fontSize: "1.2rem", marginBottom: "6px" }}>Estrutura para Aumentar a Recorrência de Vendas</h4>
                 <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.5 }}>
-                  Configuramos as perguntas e respostas exatas que os clientes fazem para que o ChatGPT e Perplexity respondam indicando seu negócio.
+                  Construímos a presença digital e a integração de dados para que os clientes satisfeitos continuem comprando novos serviços e indicando sua empresa.
                 </p>
               </div>
             </div>
@@ -79,9 +106,9 @@ export default function AISearchSection() {
                 <Check size={24} color="#ffffff" />
               </div>
               <div>
-                <h4 style={{ color: "#fff", fontSize: "1.2rem", marginBottom: "6px" }}>Calibração & Atualização Mensal DS IA</h4>
+                <h4 style={{ color: "#fff", fontSize: "1.2rem", marginBottom: "6px" }}>Linguagem Direta & Foco em Dinheiro no Bolso</h4>
                 <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.5 }}>
-                  Acompanhamos a evolução dos algoritmos de IA e calibramos os dados da sua empresa todos os meses para garantir que você permaneça no topo.
+                  Sem complicação técnica. Nossa atuação é focada estritamente em indicadores comerciais de aumento de conversão e margem de lucro real.
                 </p>
               </div>
             </div>

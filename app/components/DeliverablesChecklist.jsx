@@ -18,7 +18,7 @@ export default function DeliverablesChecklist() {
             O Que a Sua Empresa <span className="cyan-text">Recebe em Mãos</span>
           </h2>
           <p style={{ color: "var(--text-muted)", fontSize: "1.1rem" }}>
-            Transparência executiva total no Diagnóstico Executivo e no Acompanhamento Recorrente Mensal.
+            Transparência executiva total no Diagnóstico Executivo (R$ 494,00) e no Acompanhamento Recorrente Mensal.
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export default function DeliverablesChecklist() {
               transition: "all 0.2s ease"
             }}
           >
-            Diagnóstico Executivo Pago (Entrada)
+            Diagnóstico Executivo Pago (R$ 494,00)
           </button>
         </div>
 
@@ -82,7 +82,7 @@ export default function DeliverablesChecklist() {
               <h3 style={{ fontSize: "1.25rem", color: "#fff", marginBottom: "12px" }}>2. Infraestrutura Contínua para IA</h3>
               <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "10px", color: "var(--text-muted)", fontSize: "0.95rem" }}>
                 <li style={{ display: "flex", alignItems: "center", gap: "8px" }}><CheckCircle2 size={16} color="var(--blue-cyan)" /> Calibração mensal dos Schemas JSON-LD</li>
-                <li style={{ display: "flex", alignItems: "center", gap: "8px" }}><CheckCircle2 size={16} color="var(--blue-cyan)" /> Treinamento de FAQ para o ChatGPT/Perplexity</li>
+                <li style={{ display: "flex", alignItems: "center", gap: "8px" }}><CheckCircle2 size={16} color="var(--blue-cyan)" /> Treinamento de FAQ para TODAS as IAs</li>
                 <li style={{ display: "flex", alignItems: "center", gap: "8px" }}><CheckCircle2 size={16} color="var(--blue-cyan)" /> Mapeamento de bairros e microrregiões</li>
                 <li style={{ display: "flex", alignItems: "center", gap: "8px" }}><CheckCircle2 size={16} color="var(--blue-cyan)" /> Injeção de dados estruturados Schema.org</li>
               </ul>
@@ -119,7 +119,7 @@ export default function DeliverablesChecklist() {
                 🤖 Auditoria de Prontidão para IA (AI Readiness)
               </h3>
               <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.6, marginBottom: "16px" }}>
-                Mapeamento das respostas fornecidas pelo ChatGPT, Perplexity e Google SGE quando clientes da sua cidade buscam pelos seus serviços no celular.
+                Mapeamento das respostas fornecidas pelo ChatGPT, Perplexity, Gemini, Claude e Copilot quando clientes da sua cidade buscam pelos seus serviços.
               </p>
             </div>
 

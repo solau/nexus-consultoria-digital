@@ -2,7 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "DS IA — Digital Strategy & Artificial Intelligence",
-  description: "Diagnóstico Executivo de Presença Digital, desenvolvimento e manutenção de sites de alta velocidade e otimização contínua para Inteligências Artificiais (ChatGPT, Perplexity, Gemini, Google SGE).",
+  description: "Diagnóstico Executivo de Presença Digital, desenvolvimento e manutenção de sites de alta velocidade e otimização contínua para Inteligências Artificiais (ChatGPT, Perplexity, Gemini, Claude, Copilot, Google SGE).",
   keywords: ["consultoria presença digital", "otimização para IA", "ChatGPT empresa", "desenvolvimento de sites", "diagnóstico empresarial", "DS IA"],
   authors: [{ name: "DS IA" }],
   viewport: "width=device-width, initial-scale=1.0",
@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       "@type": "LocalBusiness",
       "name": "DS IA — Digital Strategy & Artificial Intelligence",
       "image": "https://dsia.com.br/logo.png",
-      "description": "Consultoria e assessoria executiva de tecnologia web, diagnóstico empresarial e otimização técnica para Inteligências Artificiais (ChatGPT, Perplexity, Google SGE).",
+      "description": "Consultoria e assessoria executiva de tecnologia web, diagnóstico empresarial e otimização técnica para Inteligências Artificiais (ChatGPT, Perplexity, Gemini, Claude, Copilot, Google SGE).",
       "telephone": "+55-71-99999-9999",
       "priceRange": "$$$",
       "address": {
@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
           "name": "O que é a otimização de site para Inteligência Artificial (GEO / AIO)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "É a injeção contínua de matrizes de dados estruturados Schema.org (JSON-LD) invisíveis que ensinam aos robôs do ChatGPT, Perplexity, Gemini e Google SGE quem é a sua empresa, recomendando seu negócio quando clientes pesquisam no celular."
+            "text": "É a injeção contínua de matrizes de dados estruturados Schema.org (JSON-LD) invisíveis que ensinam aos robôs do ChatGPT, Perplexity, Gemini, Claude e Copilot quem é a sua empresa, recomendando seu negócio quando clientes pesquisam."
           }
         },
         {
@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
           "name": "Qual o valor do Diagnóstico Executivo Pago de Entrada?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "O Diagnóstico Essential custa R$ 297,00 (entrega de Raio-X completo e reunião em 48h) e o Diagnóstico Executive custa R$ 497,00 (incluindo análise de concorrentes e plano de ação de 90 dias)."
+            "text": "O Diagnóstico Executivo da DS IA custa R$ 494,00 (entrega de Raio-X completo, auditoria de IAs, plano de 90 dias e reunião de entrega em 48h)."
           }
         }
       ]

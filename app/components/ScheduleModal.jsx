@@ -7,13 +7,12 @@ export default function ScheduleModal({ isOpen, onClose }) {
   const [name, setName] = useState("");
   const [company, setCompany] = useState("");
   const [phone, setPhone] = useState("");
-  const [packageChoice, setPackageChoice] = useState("essential");
 
   if (!isOpen) return null;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const packageName = packageChoice === "essential" ? "Diagnóstico Essential (R$ 297,00)" : "Diagnóstico Executive (R$ 497,00)";
+    const packageName = "Diagnóstico Executivo DS IA (R$ 494,00)";
     const message = `Olá! Meu nome é ${name}, da empresa ${company}. Gostaria de agendar o ${packageName} com a equipe da DS IA para estruturar a presença digital e otimização de IA do meu negócio. Telefone: ${phone}`;
     const whatsappUrl = `https://wa.me/5571999999999?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
@@ -60,7 +59,7 @@ export default function ScheduleModal({ isOpen, onClose }) {
         </button>
 
         <h3 style={{ fontSize: "1.6rem", fontWeight: 800, color: "#fff", marginBottom: "8px" }}>
-          Agendar Diagnóstico Executivo DS IA
+          Agendar Diagnóstico Executivo (R$ 494,00)
         </h3>
         <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", marginBottom: "24px" }}>
           Preencha os dados abaixo para direcionar seu atendimento diretamente ao consultor sênior no WhatsApp.
@@ -131,29 +130,20 @@ export default function ScheduleModal({ isOpen, onClose }) {
             />
           </div>
 
-          <div>
-            <label style={{ display: "block", fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "6px" }}>Escolha a Opção do Diagnóstico</label>
-            <select
-              value={packageChoice}
-              onChange={(e) => setPackageChoice(e.target.value)}
-              style={{
-                width: "100%",
-                padding: "14px",
-                borderRadius: "var(--radius-sm)",
-                background: "#0b1326",
-                border: "1px solid var(--border-cyan)",
-                color: "var(--blue-cyan)",
-                fontSize: "0.95rem",
-                outline: "none",
-                fontWeight: 600
-              }}
-            >
-              <option value="essential">Diagnóstico Essential — R$ 297,00 (Raio-X + Relatório em 48h)</option>
-              <option value="executive">Diagnóstico Executive — R$ 497,00 (Raio-X + Concorrentes + Plano IA)</option>
-            </select>
+          <div style={{
+            background: "rgba(37, 99, 235, 0.15)",
+            border: "1px solid var(--border-cyan)",
+            padding: "14px",
+            borderRadius: "var(--radius-sm)",
+            color: "var(--blue-cyan)",
+            fontSize: "0.9rem",
+            fontWeight: 700,
+            textAlign: "center"
+          }}>
+            📋 Diagnóstico Executivo Completo — R$ 494,00 (Entregável em 48h)
           </div>
 
-          <button type="submit" className="btn-blue" style={{ marginTop: "12px", justifyContent: "center", padding: "16px" }}>
+          <button type="submit" className="btn-blue" style={{ marginTop: "8px", justifyContent: "center", padding: "16px" }}>
             Continuar no WhatsApp <MessageCircle size={20} />
           </button>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { AlertTriangle, TrendingDown, Ban, ArrowRight, ShieldAlert, Zap, CheckCircle2 } from "lucide-react";
+import { AlertTriangle, Flame, RefreshCw, ArrowRight, Ban, TrendingDown, ShieldAlert, Zap } from "lucide-react";
 
 export default function PainPointsSection({ onOpenModal }) {
   return (
@@ -9,13 +9,13 @@ export default function PainPointsSection({ onOpenModal }) {
         
         <div style={{ textAlign: "center", maxWidth: "840px", margin: "0 auto 60px auto" }}>
           <div className="badge-blue">
-            <AlertTriangle size={16} color="#ef4444" /> A Verdade Nua e Crua Sobre o Marketing Tradicional
+            <AlertTriangle size={16} color="#ef4444" /> A Dor Real das Empresas na Conversão
           </div>
           <h2 style={{ fontSize: "clamp(2rem, 4vw, 2.8rem)", fontWeight: 800, marginBottom: "20px" }}>
-            Por Que Ficar Dependendo Apenas de <span style={{ color: "#ef4444", textDecoration: "line-through" }}>Instagram e Anúncios Soltos</span> Está Queimando o Seu Dinheiro?
+            Cansado de Receber <span style={{ color: "#ef4444" }}>Curiosos</span> no WhatsApp e Ver Seu Dinheiro Sumir em Anúncios Sem Retorno?
           </h2>
           <p style={{ color: "var(--text-muted)", fontSize: "1.15rem", lineHeight: 1.6 }}>
-            Se a sua empresa depende de postagens no Instagram ou coloca dinheiro em tráfego pago sem uma estrutura web inteligente, você está alimentando uma ilusão cara.
+            Ter contatos aleatórios no WhatsApp não significa ter lucro no bolso. O segredo para crescer é atrair <strong>leads cada vez mais quentes</strong> e aumentar a <strong>recorrência de vendas</strong>.
           </p>
         </div>
 
@@ -27,10 +27,10 @@ export default function PainPointsSection({ onOpenModal }) {
               <Ban size={28} color="#ef4444" />
             </div>
             <h3 style={{ fontSize: "1.35rem", color: "#fff", fontWeight: 800, marginBottom: "12px" }}>
-              1. A Armadilha de Ficar Só no Instagram
+              1. Leads Frios que Só Perguntam Preço
             </h3>
             <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.6 }}>
-              Quem tem uma dor real (precisa de um médico, advogado, arquiteto ou serviço B2B urgente) <strong>NÃO vai no Instagram rolar Reels</strong>. Quem quer comprar com urgência pesquisa no <strong>Google e no ChatGPT</strong>. Ficar fazendo postzinhos fofos no Canva não enche o caixa da sua empresa.
+              Sua equipe perde horas respondendo pessoas que "só queriam saber o valor" e somem. Sem estar presente nas <strong>buscas ativas do Google e de TODAS as IAs</strong>, você só atrai curiosos em vez de clientes com decisão de compra imediata.
             </p>
           </div>
 
@@ -39,10 +39,10 @@ export default function PainPointsSection({ onOpenModal }) {
               <TrendingDown size={28} color="#f59e0b" />
             </div>
             <h3 style={{ fontSize: "1.35rem", color: "#fff", fontWeight: 800, marginBottom: "12px" }}>
-              2. Agências "Postadoras de Canva"
+              2. Fazer Anúncios Sem Recorrência de Venda
             </h3>
             <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.6 }}>
-              Você paga R$ 1.500 a R$ 3.000 por mês para uma agência postar "Feliz Dia da Árvore" ou "Curiosidades sobre o seu nicho". O resultado? 5 curtidas da sua própria equipe, zero clientes novos batendo na sua porta e nenhuma estratégia ligada ao seu lucro líquido.
+              Pagar tráfego pago todo mês sem ter um site ultrarrápido e sem um processo de recompra é como depender de um balão de oxigênio. Se você parar de pagar o anúncio, as vendas caem a zero porque não há estrutura de retenção.
             </p>
           </div>
 
@@ -51,10 +51,10 @@ export default function PainPointsSection({ onOpenModal }) {
               <ShieldAlert size={28} color="var(--blue-light)" />
             </div>
             <h3 style={{ fontSize: "1.35rem", color: "#fff", fontWeight: 800, marginBottom: "12px" }}>
-              3. O Ralo do Tráfego Pago Sem Estrutura
+              3. Agências que Só Postam e Não Falam de Lucro
             </h3>
             <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.6 }}>
-              Investir R$ 2.000 em anúncios patrocinados sem ter um site ultrarrápido otimizado para IAs e sem um WhatsApp de resposta imediata é como <strong>jogar água em um balde furado</strong>. O lead clica, o site demora 5 segundos para abrir, a secretária demora 1 hora para responder e você perde o cliente.
+              Agências convencionais te cobram mensalidades caras para criar artes bonitinhas de "datas comemorativas" no Instagram. Isso dá curtidas, mas <strong>não coloca dinheiro na sua conta bancária</strong> nem constrói autoridade de marca.
             </p>
           </div>
 
@@ -73,21 +73,21 @@ export default function PainPointsSection({ onOpenModal }) {
           gap: "32px",
           boxShadow: "0 20px 40px -15px rgba(0, 242, 254, 0.2)"
         }}>
-          <div style={{ maxWidth: "700px" }}>
+          <div style={{ maxWidth: "720px" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "var(--blue-cyan)", fontWeight: 700, fontSize: "0.95rem", marginBottom: "12px" }}>
-              <Zap size={20} /> A Solução Definitiva da DS IA
+              <Flame size={20} /> A Virada de Chave com a DS IA
             </div>
             <h3 style={{ fontSize: "1.8rem", color: "#fff", fontWeight: 800, marginBottom: "12px" }}>
-              Esteja Onde o Seu Cliente de Alto Ticket Realmente Pesquisa
+              Atraia Clientes Quentes e Aumente o Lucro por Cliente Todo Mês
             </h3>
             <p style={{ color: "var(--text-muted)", fontSize: "1.05rem", lineHeight: 1.6 }}>
-              Nós construímos o seu <strong>Site de Alta Performance</strong>, injetamos a <strong>Infraestrutura de Dados para Recomendação no ChatGPT/Perplexity</strong> e eliminamos os vazamentos de atendimento no seu WhatsApp.
+              Conectamos seu negócio a <strong>TODAS as IAs do mercado (ChatGPT, Perplexity, Gemini, Claude, Copilot)</strong> e ao Google, garantindo um fluxo constante de pessoas prontas para fechar e uma estrutura que estimula a <strong>recorrência de compras</strong>.
             </p>
           </div>
 
           <div>
             <button className="btn-blue" onClick={onOpenModal} style={{ fontSize: "1.05rem", padding: "18px 32px", whitespace: "nowrap" }}>
-              Descobrir Meus Vazamentos de Lucro <ArrowRight size={20} />
+              Destravar Meus Leads Quentes <ArrowRight size={20} />
             </button>
           </div>
         </div>

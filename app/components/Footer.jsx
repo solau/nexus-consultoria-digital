@@ -53,7 +53,7 @@ export default function Footer({ onOpenModal }) {
               Sessões estratégicas de diagnóstico com nosso consultor sênior.
             </p>
             <button className="btn-blue" onClick={onOpenModal} style={{ padding: "10px 20px", fontSize: "0.88rem", width: "100%", justifyContent: "center" }}>
-              Agendar Diagnóstico (R$ 297)
+              Agendar Diagnóstico (R$ 494)
             </button>
           </div>
 

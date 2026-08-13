@@ -45,7 +45,7 @@ export default function Hero({ onOpenModal }) {
           {/* CTA Group */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
             <button className="btn-blue" onClick={onOpenModal} style={{ fontSize: "1.1rem", padding: "18px 36px" }}>
-              Agendar Diagnóstico Executivo (R$ 297) <ArrowRight size={20} />
+              Agendar Diagnóstico Executivo (R$ 494) <ArrowRight size={20} />
             </button>
             <a href="#diagnostico" className="btn-outline" style={{ fontSize: "1.1rem", padding: "18px 36px" }}>
               Ver Entregáveis do Raio-X

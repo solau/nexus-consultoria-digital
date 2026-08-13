@@ -173,12 +173,12 @@ export default function InteractiveDiagnostic({ onOpenModal }) {
               </div>
 
               <p style={{ color: "var(--text-muted)", fontSize: "1rem", lineHeight: 1.6, marginBottom: "32px", maxWidth: "680px", margin: "0 auto 32px auto" }}>
-                Sua empresa possui gargalos sérios na captura de clientes e presença nos motores de IA. Contrate nosso <strong>Diagnóstico Executivo Pago (R$ 297,00)</strong> com a equipe da DS IA para receber o plano de correção completo em 48h.
+                Sua empresa possui gargalos sérios na captura de clientes e presença nos motores de IA. Contrate nosso <strong>Diagnóstico Executivo Pago (R$ 494,00)</strong> com a equipe da DS IA para receber o plano de correção completo em 48h.
               </p>
 
               <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
                 <button className="btn-blue" onClick={onOpenModal} style={{ fontSize: "1.05rem", padding: "16px 32px" }}>
-                  Agendar Diagnóstico Oficial (R$ 297) <ArrowRight size={20} />
+                  Agendar Diagnóstico Oficial (R$ 494) <ArrowRight size={20} />
                 </button>
                 <button className="btn-outline" onClick={handleReset} style={{ fontSize: "1rem", padding: "16px 24px" }}>
                   Refazer Simulador <RotateCcw size={16} />
