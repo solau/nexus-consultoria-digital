@@ -1,6 +1,6 @@
 "use client";
 
-import { Cpu, ArrowRight, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Cpu, ArrowRight, CheckCircle2, Flame, RefreshCw } from "lucide-react";
 
 export default function Hero({ onOpenModal }) {
   return (
@@ -18,17 +18,17 @@ export default function Hero({ onOpenModal }) {
         <div style={{ maxWidth: "880px", margin: "0 auto", textAlign: "center" }}>
           
           <div className="badge-blue" style={{ margin: "0 auto 24px auto" }}>
-            <Cpu size={16} /> DS IA — Digital Strategy & Artificial Intelligence
+            <Cpu size={16} /> DS IA — Otimização para Todas as Inteligências Artificiais
           </div>
 
           <h1 style={{
-            fontSize: "clamp(2.5rem, 5vw, 4.2rem)",
+            fontSize: "clamp(2.4rem, 4.8vw, 4.1rem)",
             fontWeight: 800,
-            lineHeight: 1.1,
+            lineHeight: 1.15,
             marginBottom: "24px",
             letterSpacing: "-0.03em"
           }}>
-            Transformamos a Presença Digital da sua empresa em uma <span className="cyan-text">Máquina Previsível de Lucros</span> e Recomendação em IAs
+            Conectamos Sua Empresa a <span className="cyan-text">Todas as Inteligências Artificiais</span> para Trazer <span className="blue-text">Leads Cada Vez Mais Quentes</span>
           </h1>
 
           <p style={{
@@ -36,10 +36,10 @@ export default function Hero({ onOpenModal }) {
             color: "var(--text-muted)",
             lineHeight: 1.6,
             marginBottom: "40px",
-            maxWidth: "760px",
+            maxWidth: "780px",
             margin: "0 auto 40px auto"
           }}>
-            Identificamos os vazamentos de faturamento do seu negócio com nosso <strong>Diagnóstico Executivo Pago</strong>, construímos seu <strong>Site de Alta Velocidade otimizado para o ChatGPT/Google</strong> e direcionamos nosso ecossistema de soluções de alta conversão.
+            Sem blá-blá-blá técnico. Nossa consultoria faz o seu negócio ser recomendado pelo <strong>ChatGPT, Perplexity, Gemini, Claude, Copilot e Google SGE</strong>, atraindo clientes prontos para fechar e aumentando a <strong>recorrência das suas vendas</strong>.
           </p>
 
           {/* CTA Group */}
@@ -47,8 +47,8 @@ export default function Hero({ onOpenModal }) {
             <button className="btn-blue" onClick={onOpenModal} style={{ fontSize: "1.1rem", padding: "18px 36px" }}>
               Agendar Diagnóstico Executivo (R$ 297) <ArrowRight size={20} />
             </button>
-            <a href="#simulador" className="btn-outline" style={{ fontSize: "1.1rem", padding: "18px 36px" }}>
-              Fazer Simulador de Lucro Prévio
+            <a href="#diagnostico" className="btn-outline" style={{ fontSize: "1.1rem", padding: "18px 36px" }}>
+              Ver Entregáveis do Raio-X
             </a>
           </div>
 
@@ -58,23 +58,29 @@ export default function Hero({ onOpenModal }) {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "24px",
-            background: "rgba(11, 19, 38, 0.7)",
+            background: "rgba(11, 19, 38, 0.75)",
             backdropFilter: "blur(12px)",
             padding: "28px 32px",
             borderRadius: "var(--radius-md)",
             border: "1px solid rgba(0, 242, 254, 0.2)"
           }}>
             <div style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--blue-cyan)" }}>+180%</div>
-              <div style={{ fontSize: "0.875rem", color: "var(--text-muted)", marginTop: "4px" }}>Aumento Médio em Vendas Qualificadas</div>
+              <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--blue-cyan)", display: "flex", alignItems: "center", justifyContent: "center", gap: "6px" }}>
+                <Flame size={24} color="var(--blue-cyan)" /> Leads Quentes
+              </div>
+              <div style={{ fontSize: "0.875rem", color: "var(--text-muted)", marginTop: "6px" }}>Clientes que Já Chegam Prontos Para Comprar</div>
             </div>
+
             <div style={{ textAlign: "center", borderLeft: "1px solid var(--border-glass)", borderRight: "1px solid var(--border-glass)" }}>
-              <div style={{ fontSize: "2rem", fontWeight: 800, color: "#fff" }}>ChatGPT & SGE</div>
-              <div style={{ fontSize: "0.875rem", color: "var(--text-muted)", marginTop: "4px" }}>Recomendação Ativa nos Motores de IA</div>
+              <div style={{ fontSize: "2rem", fontWeight: 800, color: "#fff" }}>Todas as IAs</div>
+              <div style={{ fontSize: "0.875rem", color: "var(--text-muted)", marginTop: "6px" }}>ChatGPT, Perplexity, Gemini, Claude & Copilot</div>
             </div>
+
             <div style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--blue-light)" }}>85%</div>
-              <div style={{ fontSize: "0.875rem", color: "var(--text-muted)", marginTop: "4px" }}>Retenção Mensal de Empresas Parceiras</div>
+              <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--blue-light)", display: "flex", alignItems: "center", justifyContent: "center", gap: "6px" }}>
+                <RefreshCw size={24} color="var(--blue-light)" /> + Recorrência
+              </div>
+              <div style={{ fontSize: "0.875rem", color: "var(--text-muted)", marginTop: "6px" }}>Estrutura para Clientes Comprarem Sempre</div>
             </div>
           </div>
 
@@ -90,13 +96,13 @@ export default function Hero({ onOpenModal }) {
             color: "var(--text-muted)"
           }}>
             <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <CheckCircle2 size={18} color="var(--blue-cyan)" /> Sem fidelidade abusiva
+              <CheckCircle2 size={18} color="var(--blue-cyan)" /> Linguagem simples e foco em conversão real
             </span>
             <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <CheckCircle2 size={18} color="var(--blue-cyan)" /> Site Próprio + Hospedagem SSL inclusa
+              <CheckCircle2 size={18} color="var(--blue-cyan)" /> Site rápido + Hospedagem contínua inclusa
             </span>
             <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <CheckCircle2 size={18} color="var(--blue-cyan)" /> Soluções Certificadas Homologadas
+              <CheckCircle2 size={18} color="var(--blue-cyan)" /> Soluções comerciais homologadas
             </span>
           </div>
 

@@ -11,7 +11,6 @@ import MonthlyPlans from "./components/MonthlyPlans";
 import SoftwareHubSection from "./components/SoftwareHubSection";
 import PartnerHub from "./components/PartnerHub";
 import NicheShowcase from "./components/NicheShowcase";
-import ProfitCalculator from "./components/ProfitCalculator";
 import FAQAccordion from "./components/FAQAccordion";
 import Footer from "./components/Footer";
 import ScheduleModal from "./components/ScheduleModal";
@@ -45,8 +44,6 @@ export default function Home() {
       <PartnerHub onOpenModal={handleOpenModal} />
 
       <NicheShowcase onOpenModal={handleOpenModal} />
-
-      <ProfitCalculator onOpenModal={handleOpenModal} />
 
       <FAQAccordion />
 
