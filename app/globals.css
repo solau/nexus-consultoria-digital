@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg-dark: #08090c;
+  --bg-card: #101218;
+  --bg-card-hover: #161922;
+  --bg-glass: rgba(16, 18, 24, 0.75);
+  
+  --gold-primary: #d9b340;
+  --gold-light: #f3d474;
+  --gold-dark: #a6821e;
+  --gold-gradient: linear-gradient(135deg, #f5d061 0%, #d9b340 50%, #9e7b1a 100%);
+  --gold-glow: rgba(217, 179, 64, 0.25);
+  
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --text-dim: #6b7280;
+
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-gold: rgba(217, 179, 64, 0.3);
+  
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  
+  --shadow-premium: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+  --shadow-gold: 0 10px 30px -10px rgba(217, 179, 64, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: #202430;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}
+
+/* Background Gradients */
+.bg-glow-radial {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--gold-glow) 0%, rgba(8,9,12,0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gold-text {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.gold-border-glow {
+  border: 1px solid var(--border-gold);
+  box-shadow: var(--shadow-gold);
+}
+
+.glass-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(217, 179, 64, 0.4);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-premium), 0 0 20px rgba(217, 179, 64, 0.15);
+}
+
+.btn-gold {
+  background: var(--gold-gradient);
+  color: #08090c;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(217, 179, 64, 0.3);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(217, 179, 64, 0.5);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-main);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-gold);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(217, 179, 64, 0.1);
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+}
+
+/* Section Container */
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.badge-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(217, 179, 64, 0.1);
+  border: 1px solid rgba(217, 179, 64, 0.3);
+  border-radius: var(--radius-full);
+  color: var(--gold-light);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .grid-3, .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .section-padding {
+    padding: 60px 0;
+  }
+}
