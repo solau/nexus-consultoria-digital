@@ -4,10 +4,10 @@ import { Cpu, ShieldCheck } from "lucide-react";
 
 export default function Footer({ onOpenModal }) {
   return (
-    <footer style={{ background: "#04070f", borderTop: "1px solid rgba(0, 242, 254, 0.15)", padding: "60px 0 30px 0" }}>
+    <footer style={{ background: "#04070f", borderTop: "1px solid rgba(0, 242, 254, 0.15)", padding: "50px 0 30px 0" }}>
       <div className="container">
         
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1.5fr 1.5fr", gap: "40px", marginBottom: "50px" }}>
+        <div className="footer-grid" style={{ marginBottom: "40px" }}>
           
           <div>
             <a href="#" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none", marginBottom: "16px" }}>
@@ -57,6 +57,20 @@ export default function Footer({ onOpenModal }) {
         </div>
 
       </div>
+
+      <style jsx>{`
+        .footer-grid {
+          display: grid;
+          grid-template-columns: 2fr 1.5fr 1.5fr;
+          gap: 40px;
+        }
+        @media (max-width: 768px) {
+          .footer-grid {
+            grid-template-columns: 1fr !important;
+            gap: 28px !important;
+          }
+        }
+      `}</style>
     </footer>
   );
 }
