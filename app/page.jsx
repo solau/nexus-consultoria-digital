@@ -10,7 +10,6 @@ import DeliverablesChecklist from "./components/DeliverablesChecklist";
 import MonthlyPlans from "./components/MonthlyPlans";
 import SoftwareHubSection from "./components/SoftwareHubSection";
 import PartnerHub from "./components/PartnerHub";
-import NicheShowcase from "./components/NicheShowcase";
 import FAQAccordion from "./components/FAQAccordion";
 import Footer from "./components/Footer";
 import ScheduleModal from "./components/ScheduleModal";
@@ -53,10 +52,6 @@ export default function Home() {
 
       <div id="solucoes-certificadas">
         <PartnerHub onOpenModal={handleOpenModal} />
-      </div>
-
-      <div id="nichos">
-        <NicheShowcase onOpenModal={handleOpenModal} />
       </div>
 
       <div id="faq">

@@ -7,7 +7,7 @@ export default function Footer({ onOpenModal }) {
     <footer style={{ background: "#04070f", borderTop: "1px solid rgba(0, 242, 254, 0.15)", padding: "60px 0 30px 0" }}>
       <div className="container">
         
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1.5fr", gap: "40px", marginBottom: "50px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "2fr 1.5fr 1.5fr", gap: "40px", marginBottom: "50px" }}>
           
           <div>
             <a href="#" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none", marginBottom: "16px" }}>
@@ -40,22 +40,11 @@ export default function Footer({ onOpenModal }) {
           </div>
 
           <div>
-            <h4 style={{ color: "#fff", fontSize: "1rem", marginBottom: "16px", fontWeight: 700 }}>Nichos Atendidos</h4>
-            <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "10px", fontSize: "0.9rem", color: "var(--text-muted)" }}>
-              <li>Saúde & Estética</li>
-              <li>Serviços Jurídicos</li>
-              <li>Arquitetura & Móveis</li>
-              <li>Serviços B2B</li>
-              <li>Gastronomia Premium</li>
-            </ul>
-          </div>
-
-          <div>
             <h4 style={{ color: "#fff", fontSize: "1rem", marginBottom: "16px", fontWeight: 700 }}>Atendimento Direto</h4>
-            <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", lineHeight: 1.5, marginBottom: "16px" }}>
-              Sessões estratégicas de diagnóstico com nosso consultor sênior.
+            <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", lineHeight: 1.5, marginBottom: "20px" }}>
+              Sessões estratégicas de diagnóstico presencial ou online com nosso consultor sênior.
             </p>
-            <button className="btn-blue" onClick={onOpenModal} style={{ padding: "10px 20px", fontSize: "0.88rem", width: "100%", justifyContent: "center" }}>
+            <button className="btn-blue" onClick={onOpenModal} style={{ padding: "12px 24px", fontSize: "0.9rem", width: "100%", justifyContent: "center" }}>
               Agendar Diagnóstico (R$ 494)
             </button>
           </div>
