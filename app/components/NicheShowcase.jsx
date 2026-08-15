@@ -10,7 +10,7 @@ export default function NicheShowcase({ onOpenModal }) {
         
         <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 48px auto" }}>
           <div className="badge-blue">
-            <Target size={16} /> Especialização nos 5 Nichos de Alto Ticket
+            <Target size={16} /> Estratégia de Mercado DS IA
           </div>
           <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 800, marginBottom: "16px" }}>
             Desenhado para Empresas onde <span className="teal-text">1 Único Cliente Cobre o Investimento</span>
