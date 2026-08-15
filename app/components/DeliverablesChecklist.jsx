@@ -79,7 +79,7 @@ export default function DeliverablesChecklist() {
                 <Cpu size={24} color="var(--pastel-blue-light)" />
               </div>
               <h3 style={{ fontSize: "1.2rem", color: "var(--pastel-blue-light)", marginBottom: "10px", fontWeight: 700 }}>
-                2. Auditoria de Prontidão para IA (AI Readiness)
+                2. Auditoria de Presença em IA
               </h3>
               <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", lineHeight: 1.55 }}>
                 Status real da visibilidade da sua empresa no ChatGPT, Perplexity, Gemini, Claude e Copilot na sua região.
@@ -94,7 +94,7 @@ export default function DeliverablesChecklist() {
                 3. Plano de Ação Estratégico de 90 Dias
               </h3>
               <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", lineHeight: 1.55 }}>
-                Roadmap prático com os ajustes prioritários no site, fotos, anúncios e automações de atendimento sem desperdício de caixa.
+                Roteiro prático com os ajustes prioritários no site, fotos, anúncios e atendimento sem desperdício de caixa.
               </p>
             </div>
 
@@ -120,8 +120,8 @@ export default function DeliverablesChecklist() {
               </div>
               <h3 style={{ fontSize: "1.15rem", color: "#fff", marginBottom: "10px", fontWeight: 700 }}>Plataforma Web Executiva</h3>
               <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "8px", color: "var(--text-muted)", fontSize: "0.88rem" }}>
-                <li style={{ display: "flex", alignItems: "center", gap: "6px" }}><CheckCircle2 size={15} color="var(--pastel-teal)" /> Hospedagem ultrarrápida (&lt;1.5s) e SSL</li>
-                <li style={{ display: "flex", alignItems: "center", gap: "6px" }}><CheckCircle2 size={15} color="var(--pastel-teal)" /> Manutenção 24/7 e suporte contínuo</li>
+                <li style={{ display: "flex", alignItems: "center", gap: "6px" }}><CheckCircle2 size={15} color="var(--pastel-teal)" /> Site ultrarrápido e seguro</li>
+                <li style={{ display: "flex", alignItems: "center", gap: "6px" }}><CheckCircle2 size={15} color="var(--pastel-teal)" /> Manutenção e suporte contínuo</li>
                 <li style={{ display: "flex", alignItems: "center", gap: "6px" }}><CheckCircle2 size={15} color="var(--pastel-teal)" /> Atualização de banners e novos serviços</li>
               </ul>
             </div>
@@ -130,11 +130,11 @@ export default function DeliverablesChecklist() {
               <div style={{ background: "rgba(129, 172, 157, 0.15)", width: "42px", height: "42px", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "16px" }}>
                 <Cpu size={24} color="var(--pastel-teal)" />
               </div>
-              <h3 style={{ fontSize: "1.15rem", color: "#fff", marginBottom: "10px", fontWeight: 700 }}>Infraestrutura para IA (GEO)</h3>
+              <h3 style={{ fontSize: "1.15rem", color: "#fff", marginBottom: "10px", fontWeight: 700 }}>Presença Estratégica em IA</h3>
               <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "8px", color: "var(--text-muted)", fontSize: "0.88rem" }}>
-                <li style={{ display: "flex", alignItems: "center", gap: "6px" }}><CheckCircle2 size={15} color="var(--pastel-teal)" /> Atualização mensal de Schemas JSON-LD</li>
-                <li style={{ display: "flex", alignItems: "center", gap: "6px" }}><CheckCircle2 size={15} color="var(--pastel-teal)" /> Treinamento de FAQs estratégicos para IAs</li>
-                <li style={{ display: "flex", alignItems: "center", gap: "6px" }}><CheckCircle2 size={15} color="var(--pastel-teal)" /> Mapeamento mensal de microrregiões</li>
+                <li style={{ display: "flex", alignItems: "center", gap: "6px" }}><CheckCircle2 size={15} color="var(--pastel-teal)" /> Atualização contínua das respostas de IA</li>
+                <li style={{ display: "flex", alignItems: "center", gap: "6px" }}><CheckCircle2 size={15} color="var(--pastel-teal)" /> Treinamento dos assistentes virtuais de IA</li>
+                <li style={{ display: "flex", alignItems: "center", gap: "6px" }}><CheckCircle2 size={15} color="var(--pastel-teal)" /> Destaque nos bairros de maior interesse</li>
               </ul>
             </div>
 
@@ -145,7 +145,7 @@ export default function DeliverablesChecklist() {
               <h3 style={{ fontSize: "1.15rem", color: "#fff", marginBottom: "10px", fontWeight: 700 }}>Comitê Mensal & Governança</h3>
               <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "8px", color: "var(--text-muted)", fontSize: "0.88rem" }}>
                 <li style={{ display: "flex", alignItems: "center", gap: "6px" }}><CheckCircle2 size={15} color="var(--pastel-teal)" /> Reunião mensal de alinhamento (60 min)</li>
-                <li style={{ display: "flex", alignItems: "center", gap: "6px" }}><CheckCircle2 size={15} color="var(--pastel-teal)" /> Gestão de metas das soluções homologadas</li>
+                <li style={{ display: "flex", alignItems: "center", gap: "6px" }}><CheckCircle2 size={15} color="var(--pastel-teal)" /> Gestão de metas das soluções parceiras</li>
                 <li style={{ display: "flex", alignItems: "center", gap: "6px" }}><CheckCircle2 size={15} color="var(--pastel-teal)" /> Relatório visual de autoridade digital</li>
               </ul>
             </div>

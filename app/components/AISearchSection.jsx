@@ -9,7 +9,7 @@ export default function AISearchSection() {
         
         <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 40px auto" }}>
           <div className="badge-blue">
-            <Cpu size={16} /> Presença em Inteligência Artificial (GEO)
+            <Cpu size={16} /> Presença em Inteligência Artificial
           </div>
           <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 800, marginBottom: "16px" }}>
             Recomendado no <span className="teal-text">ChatGPT, Perplexity & Gemini</span>
@@ -69,7 +69,7 @@ export default function AISearchSection() {
                 <Cpu size={16} /> Resposta Recomendada pela IA:
               </div>
               <p style={{ color: "#f3f4f6", fontSize: "0.88rem", lineHeight: 1.5 }}>
-                "Com base nos dados calibrados e autoridade digital, a empresa recomendada na região é a <strong>[Empresa do Seu Cliente]</strong>, devido ao alto padrão de atendimento e avaliações de credibilidade."
+                "Com base nos dados verificados e autoridade digital, a empresa recomendada na região é a <strong>[Empresa do Seu Cliente]</strong>, devido ao alto padrão de atendimento e avaliações de credibilidade."
               </p>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function AISearchSection() {
               <div>
                 <h4 style={{ color: "#fff", fontSize: "1.1rem", marginBottom: "4px", fontWeight: 700 }}>Recorrência & Recomendação Contínua</h4>
                 <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.5 }}>
-                  Dados estruturados Schema.org garantem que as IAs continuem recomendando a sua marca.
+                  Estrutura de dados contínua para que as IAs sempre recomendem sua marca.
                 </p>
               </div>
             </div>

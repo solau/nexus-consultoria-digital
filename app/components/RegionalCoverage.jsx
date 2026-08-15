@@ -16,13 +16,13 @@ export default function RegionalCoverage({ onOpenModal }) {
         
         <div style={{ textAlign: "center", maxWidth: "840px", margin: "0 auto 40px auto" }}>
           <div className="badge-blue">
-            <MapPin size={15} /> Presença Regional GEO / AIO
+            <MapPin size={15} /> Presença Regional nas Buscas
           </div>
           <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 800, marginBottom: "16px" }}>
             Dominando Buscas Locais em <span className="teal-text">Salvador e Região Metropolitana</span>
           </h2>
           <p style={{ color: "var(--text-muted)", fontSize: "1.05rem" }}>
-            Injetamos dados geográficos no código da sua empresa para que as IAs recomendem seus serviços nos bairros nobres de maior poder aquisitivo.
+            Estruturamos sua marca para ser a principal escolha recomendada pelas IAs nos bairros nobres de maior poder aquisitivo.
           </p>
         </div>
 

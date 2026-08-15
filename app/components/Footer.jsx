@@ -19,10 +19,10 @@ export default function Footer({ onOpenModal }) {
               </span>
             </a>
             <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.55, maxWidth: "340px", marginBottom: "16px" }}>
-              Consultoria Executiva de Presença Digital, Alta Velocidade Web e Otimização para Inteligência Artificial (GEO / AIO) para PMEs.
+              Consultoria Executiva de Presença Digital, Alta Velocidade Web e Recomendação em Inteligência Artificial para PMEs.
             </p>
             <div style={{ display: "flex", alignItems: "center", gap: "6px", color: "var(--pastel-teal)", fontSize: "0.82rem", fontWeight: 600 }}>
-              <ShieldCheck size={16} /> Padrão Executivo de Qualidade & AI Search
+              <ShieldCheck size={16} /> Padrão Executivo de Qualidade & Busca em IA
             </div>
           </div>
 

@@ -89,9 +89,9 @@ export default function BeforeAfterComparison({ onOpenModal }) {
                 </div>
 
                 <div style={{ background: "rgba(0,0,0,0.3)", padding: "18px", borderRadius: "12px", border: "1px solid rgba(229, 115, 115, 0.15)" }}>
-                  <div style={{ fontWeight: 700, color: "#fff", marginBottom: "6px" }}>🐢 Site Lento sem SEO Estruturado</div>
+                  <div style={{ fontWeight: 700, color: "#fff", marginBottom: "6px" }}>🐢 Site Lento e sem Destaque no Google</div>
                   <p style={{ color: "var(--text-muted)", fontSize: "0.86rem", lineHeight: 1.45 }}>
-                    Site demorado no celular e sem códigos invisíveis (Schema.org) exigidos pelos robôs de busca modernos.
+                    Site demorado no celular e sem a estrutura necessária para aparecer nas primeiras posições de busca.
                   </p>
                 </div>
               </div>
@@ -120,7 +120,7 @@ export default function BeforeAfterComparison({ onOpenModal }) {
                 <div style={{ background: "rgba(28, 34, 48, 0.8)", padding: "18px", borderRadius: "12px", border: "1px solid var(--border-pastel-teal)" }}>
                   <div style={{ fontWeight: 700, color: "#fff", marginBottom: "6px" }}>🚀 1 Novo Cliente Já Paga Todo o Contrato</div>
                   <p style={{ color: "var(--text-muted)", fontSize: "0.86rem", lineHeight: 1.45 }}>
-                    Foco nos 5 nichos de alto ticket onde 1 único fechamento cobre todo o investimento anual.
+                    Foco nos nichos de alto ticket onde 1 único fechamento cobre todo o investimento anual.
                   </p>
                 </div>
 
