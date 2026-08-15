@@ -1,49 +1,69 @@
 "use client";
 
 import { targetNiches } from "../data/targetNiches";
-import { Target } from "lucide-react";
+import { Target, CheckCircle2 } from "lucide-react";
 
 export default function NicheShowcase({ onOpenModal }) {
   return (
-    <section className="section-padding" style={{ background: "#080d1a" }}>
+    <section className="section-padding" style={{ background: "var(--bg-dark)", borderTop: "1px solid var(--border-glass)" }}>
       <div className="container">
         
-        <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px auto" }}>
+        <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 48px auto" }}>
           <div className="badge-blue">
-            <Target size={16} /> Especialização de Mercado DS IA
+            <Target size={16} /> Especialização nos 5 Nichos de Alto Ticket
           </div>
-          <h2 style={{ fontSize: "2.5rem", fontWeight: 800, marginBottom: "16px" }}>
-            Os 5 Nichos de <span className="cyan-text">Alto Ticket</span> Atendidos
+          <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 800, marginBottom: "16px" }}>
+            Desenhado para Empresas onde <span className="teal-text">1 Único Cliente Cobre o Investimento</span>
           </h2>
-          <p style={{ color: "var(--text-muted)", fontSize: "1.1rem" }}>
-            Estruturas de presença digital customizadas para empresas com alto valor percebido de venda.
+          <p style={{ color: "var(--text-muted)", fontSize: "1.05rem" }}>
+            Estratégias sob medida para PMEs com alto ticket médio que exigem autoridade máxima no Google e ChatGPT.
           </p>
+        </div>
+
+        {/* Niche Banner Collage Image */}
+        <div style={{
+          marginBottom: "48px",
+          borderRadius: "var(--radius-md)",
+          overflow: "hidden",
+          border: "1px solid var(--border-pastel-blue)",
+          boxShadow: "var(--shadow-premium)"
+        }}>
+          <img 
+            src="/images/pme_niches_banner.png" 
+            alt="Nichos de Alto Ticket Atendidos pela DS IA" 
+            style={{ width: "100%", height: "240px", objectFit: "cover", display: "block" }}
+          />
         </div>
 
         <div className="grid-3">
           {targetNiches.map((niche) => (
-            <div key={niche.id} className="glass-card" style={{ padding: "32px" }}>
+            <div key={niche.id} className="glass-card" style={{ padding: "28px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
               
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "16px" }}>
-                <span style={{ fontSize: "1.8rem", fontWeight: 900, color: "var(--blue-cyan)" }}>
-                  {niche.rank}
-                </span>
-                <span style={{ background: "rgba(255,255,255,0.05)", border: "1px solid var(--border-glass)", color: "var(--text-muted)", padding: "4px 12px", borderRadius: "12px", fontSize: "0.8rem" }}>
-                  Ticket: {niche.ticket}
-                </span>
+              <div>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "14px" }}>
+                  <span style={{ fontSize: "1.5rem", fontWeight: 900, color: "var(--pastel-blue-light)" }}>
+                    {niche.rank}
+                  </span>
+                  <span style={{ background: "rgba(129, 172, 157, 0.12)", border: "1px solid var(--border-pastel-teal)", color: "var(--pastel-sage)", padding: "4px 10px", borderRadius: "99px", fontSize: "0.78rem", fontWeight: 700 }}>
+                    Ticket: {niche.ticket}
+                  </span>
+                </div>
+
+                <h3 style={{ fontSize: "1.2rem", color: "#fff", fontWeight: 800, marginBottom: "8px" }}>
+                  {niche.title}
+                </h3>
+
+                <p style={{ color: "var(--text-dim)", fontSize: "0.86rem", marginBottom: "16px", lineHeight: 1.45 }}>
+                  {niche.examples}
+                </p>
               </div>
 
-              <h3 style={{ fontSize: "1.3rem", color: "#fff", fontWeight: 800, marginBottom: "8px" }}>
-                {niche.title}
-              </h3>
-
-              <p style={{ color: "var(--text-dim)", fontSize: "0.88rem", marginBottom: "16px" }}>
-                {niche.examples}
-              </p>
-
-              <p style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.5, borderTop: "1px solid var(--border-glass)", paddingTop: "16px" }}>
-                💡 <strong>Por que contrata:</strong> {niche.why}
-              </p>
+              <div style={{ borderTop: "1px solid var(--border-glass)", paddingTop: "14px", marginTop: "12px" }}>
+                <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.5, display: "flex", alignItems: "flex-start", gap: "8px" }}>
+                  <CheckCircle2 size={16} color="var(--pastel-teal)" style={{ shrink: 0, marginTop: "2px" }} />
+                  <span>{niche.why}</span>
+                </p>
+              </div>
 
             </div>
           ))}

@@ -5,48 +5,48 @@ import { Database, ArrowUpRight, Zap } from "lucide-react";
 
 export default function SoftwareHubSection({ onOpenModal }) {
   return (
-    <section id="softwares" className="section-padding" style={{ background: "#080d1a" }}>
+    <section id="sistemas" className="section-padding" style={{ background: "var(--bg-dark)", borderTop: "1px solid var(--border-glass)" }}>
       <div className="container">
         
-        <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 60px auto" }}>
+        <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 40px auto" }}>
           <div className="badge-blue">
-            <Database size={16} /> Ecossistema de Soluções Empresariais
+            <Database size={16} /> Ecossistema Integrado de Sistemas
           </div>
-          <h2 style={{ fontSize: "2.5rem", fontWeight: 800, marginBottom: "16px" }}>
-            Sistemas Integrados de <span className="cyan-text">CRM & ERP Empresarial</span>
+          <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 800, marginBottom: "16px" }}>
+            Plataformas de <span className="teal-text">CRM & ERP Empresarial</span>
           </h2>
-          <p style={{ color: "var(--text-muted)", fontSize: "1.1rem" }}>
-            Conectamos a sua empresa às plataformas mais seguras do mercado global para automatizar o atendimento no WhatsApp, emitir notas fiscais e controlar vendas.
+          <p style={{ color: "var(--text-muted)", fontSize: "1.05rem" }}>
+            Supervisão e implantação de softwares homologados para gestão de orçamentos no WhatsApp, notas fiscais e conciliação financeira.
           </p>
         </div>
 
         <div className="grid-2">
           {softwarePlatforms.map((sw) => (
-            <div key={sw.id} className="glass-card" style={{ padding: "32px", border: sw.popular ? "1px solid var(--border-cyan)" : "1px solid var(--border-glass)" }}>
+            <div key={sw.id} className="glass-card" style={{ padding: "28px", border: sw.popular ? "1px solid var(--border-pastel-teal)" : "1px solid var(--border-glass)" }}>
               
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "16px" }}>
-                <span style={{ fontSize: "0.8rem", color: "var(--blue-cyan)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em" }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "14px" }}>
+                <span style={{ fontSize: "0.78rem", color: "var(--pastel-blue-light)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em" }}>
                   {sw.category}
                 </span>
-                <span style={{ background: "rgba(37, 99, 235, 0.2)", color: "var(--blue-light)", padding: "4px 12px", borderRadius: "12px", fontSize: "0.75rem", fontWeight: 700 }}>
+                <span style={{ background: "rgba(129, 172, 157, 0.15)", color: "var(--pastel-sage)", padding: "4px 10px", borderRadius: "99px", fontSize: "0.75rem", fontWeight: 700 }}>
                   {sw.badge}
                 </span>
               </div>
 
-              <h3 style={{ fontSize: "1.5rem", color: "#fff", fontWeight: 800, marginBottom: "8px" }}>
+              <h3 style={{ fontSize: "1.3rem", color: "#fff", fontWeight: 800, marginBottom: "8px" }}>
                 {sw.name}
               </h3>
 
-              <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "var(--blue-cyan)", fontWeight: 700, fontSize: "0.95rem", marginBottom: "16px" }}>
-                <Zap size={18} /> {sw.benefit}
+              <div style={{ display: "flex", alignItems: "center", gap: "6px", color: "var(--pastel-teal)", fontWeight: 700, fontSize: "0.9rem", marginBottom: "14px" }}>
+                <Zap size={16} /> {sw.benefit}
               </div>
 
-              <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.6, marginBottom: "24px" }}>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", lineHeight: 1.5, marginBottom: "20px" }}>
                 {sw.description}
               </p>
 
-              <button className="btn-outline" onClick={onOpenModal} style={{ width: "100%", justifyContent: "center", padding: "12px 20px", fontSize: "0.9rem" }}>
-                Solicitar Implantação & Direcionamento <ArrowUpRight size={16} />
+              <button className="btn-outline" onClick={onOpenModal} style={{ width: "100%", justifyContent: "center", padding: "10px 18px", fontSize: "0.88rem" }}>
+                Solicitar Diagnóstico de Implantação <ArrowUpRight size={15} />
               </button>
 
             </div>

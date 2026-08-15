@@ -3,6 +3,9 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import QuickStatsBanner from "./components/QuickStatsBanner";
+import BeforeAfterComparison from "./components/BeforeAfterComparison";
+import NicheShowcase from "./components/NicheShowcase";
 import PainPointsSection from "./components/PainPointsSection";
 import AISearchSection from "./components/AISearchSection";
 import RegionalCoverage from "./components/RegionalCoverage";
@@ -26,6 +29,16 @@ export default function Home() {
       <Navbar onOpenModal={handleOpenModal} />
       
       <Hero onOpenModal={handleOpenModal} />
+
+      <QuickStatsBanner />
+
+      <div id="comparativo">
+        <BeforeAfterComparison onOpenModal={handleOpenModal} />
+      </div>
+
+      <div id="nichos">
+        <NicheShowcase onOpenModal={handleOpenModal} />
+      </div>
 
       <div id="dores">
         <PainPointsSection onOpenModal={handleOpenModal} />

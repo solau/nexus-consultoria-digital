@@ -1,106 +1,117 @@
 "use client";
 
-import { Cpu, ArrowRight, CheckCircle2, Flame, RefreshCw } from "lucide-react";
+import { Cpu, ArrowRight, CheckCircle2, TrendingUp, Sparkles } from "lucide-react";
 
 export default function Hero({ onOpenModal }) {
   return (
     <section className="hero-section" style={{
       position: "relative",
-      paddingTop: "140px",
-      paddingBottom: "80px",
+      paddingTop: "125px",
+      paddingBottom: "60px",
       overflow: "hidden"
     }}>
-      {/* Glow Effects */}
-      <div className="bg-glow-radial" style={{ top: "-100px", left: "50%", transform: "translateX(-50%)" }}></div>
+      {/* Background Glow */}
+      <div className="bg-glow-radial" style={{ top: "-120px", left: "50%", transform: "translateX(-50%)" }}></div>
 
       <div className="container" style={{ position: "relative", zIndex: 2 }}>
         
-        <div style={{ maxWidth: "880px", margin: "0 auto", textAlign: "center" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "36px", alignItems: "center" }} className="hero-grid">
           
-          <div className="badge-blue" style={{ margin: "0 auto 24px auto" }}>
-            <Cpu size={16} /> DS IA — Otimização para Todas as Inteligências Artificiais
+          {/* Left Column: Ultra-punchy Messaging */}
+          <div>
+            <div className="badge-blue">
+              <Sparkles size={14} color="var(--pastel-teal)" /> Presença Ativa no ChatGPT & Gemini
+            </div>
+
+            <h1 style={{
+              fontSize: "clamp(2.1rem, 4vw, 3.4rem)",
+              fontWeight: 900,
+              lineHeight: 1.15,
+              marginBottom: "16px",
+              letterSpacing: "-0.03em"
+            }}>
+              Sua Empresa Recomendada no <span className="teal-text">ChatGPT, Gemini & Perplexity</span>
+            </h1>
+
+            <p style={{
+              fontSize: "clamp(1rem, 1.5vw, 1.15rem)",
+              color: "var(--text-muted)",
+              lineHeight: 1.5,
+              marginBottom: "24px"
+            }}>
+              Atraia <strong>leads qualificados de alto ticket</strong> diretamente para seu WhatsApp. <strong>1 único cliente novo</strong> já cobre todo o seu investimento.
+            </p>
+
+            {/* Micro Chips for Instant Scan */}
+            <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "28px" }}>
+              <span style={{ background: "rgba(129, 172, 157, 0.12)", border: "1px solid var(--border-pastel-teal)", color: "var(--pastel-sage)", padding: "6px 14px", borderRadius: "99px", fontSize: "0.8rem", fontWeight: 700 }}>
+                ⚡ Raio-X em 48 Horas
+              </span>
+              <span style={{ background: "rgba(124, 158, 188, 0.12)", border: "1px solid var(--border-pastel-blue)", color: "var(--pastel-blue-light)", padding: "6px 14px", borderRadius: "99px", fontSize: "0.8rem", fontWeight: 700 }}>
+                📋 Diagnóstico R$ 494
+              </span>
+              <span style={{ background: "rgba(216, 195, 151, 0.12)", border: "1px solid var(--border-pastel-gold)", color: "var(--pastel-gold)", padding: "6px 14px", borderRadius: "99px", fontSize: "0.8rem", fontWeight: 700 }}>
+                🎯 Sem Pegadinhas
+              </span>
+            </div>
+
+            {/* CTAs */}
+            <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
+              <button className="btn-blue" onClick={onOpenModal} style={{ fontSize: "0.98rem", padding: "14px 28px" }}>
+                Agendar Diagnóstico (R$ 494) <ArrowRight size={18} />
+              </button>
+              <a href="#comparativo" className="btn-outline" style={{ fontSize: "0.92rem", padding: "14px 22px" }}>
+                Ver Comparativo
+              </a>
+            </div>
+
           </div>
 
-          <h1 style={{
-            fontSize: "clamp(2rem, 4.8vw, 4.1rem)",
-            fontWeight: 800,
-            lineHeight: 1.15,
-            marginBottom: "24px",
-            letterSpacing: "-0.03em"
-          }}>
-            Conectamos Sua Empresa a <span className="cyan-text">Todas as Inteligências Artificiais</span> para Trazer <span className="blue-text">Leads Cada Vez Mais Quentes</span>
-          </h1>
-
-          <p style={{
-            fontSize: "clamp(1rem, 2vw, 1.25rem)",
-            color: "var(--text-muted)",
-            lineHeight: 1.6,
-            marginBottom: "36px",
-            maxWidth: "780px",
-            margin: "0 auto 36px auto"
-          }}>
-            Sem blá-blá-blá técnico. Nossa consultoria faz o seu negócio ser recomendado pelo <strong>ChatGPT, Perplexity, Gemini, Claude, Copilot e Google SGE</strong>, atraindo clientes prontos para fechar e aumentando a <strong>recorrência das suas vendas</strong>.
-          </p>
-
-          {/* CTA Group */}
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
-            <button className="btn-blue" onClick={onOpenModal} style={{ fontSize: "1.05rem", padding: "16px 32px" }}>
-              Agendar Diagnóstico Executivo (R$ 494) <ArrowRight size={20} />
-            </button>
-            <a href="#diagnostico" className="btn-outline" style={{ fontSize: "1.05rem", padding: "16px 32px" }}>
-              Ver Entregáveis do Raio-X
-            </a>
-          </div>
-
-          {/* Key Metrics Pill - Responsive Grid */}
-          <div className="hero-metrics-grid" style={{
-            marginTop: "50px",
-            background: "rgba(11, 19, 38, 0.75)",
-            backdropFilter: "blur(12px)",
-            padding: "24px",
-            borderRadius: "var(--radius-md)",
-            border: "1px solid rgba(0, 242, 254, 0.2)"
-          }}>
-            <div className="metric-box">
-              <div style={{ fontSize: "1.8rem", fontWeight: 800, color: "var(--blue-cyan)", display: "flex", alignItems: "center", justifyContent: "center", gap: "6px" }}>
-                <Flame size={22} color="var(--blue-cyan)" /> Leads Quentes
+          {/* Right Column: Hero Executive Image */}
+          <div style={{ position: "relative" }}>
+            <div style={{
+              borderRadius: "var(--radius-lg)",
+              overflow: "hidden",
+              border: "1px solid var(--border-pastel-blue)",
+              boxShadow: "var(--shadow-premium)",
+              position: "relative"
+            }}>
+              <img 
+                src="/images/pme_executive_hero.png" 
+                alt="Reunião Executiva DS IA com empresários PMEs" 
+                style={{ width: "100%", height: "auto", display: "block", objectFit: "cover" }}
+              />
+              
+              {/* Floating Badge Overlay */}
+              <div style={{
+                position: "absolute",
+                bottom: "16px",
+                left: "16px",
+                right: "16px",
+                background: "rgba(28, 34, 48, 0.92)",
+                backdropFilter: "blur(12px)",
+                padding: "14px 18px",
+                borderRadius: "var(--radius-md)",
+                border: "1px solid var(--border-glass)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: "12px"
+              }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                  <div style={{ width: "34px", height: "34px", borderRadius: "50%", background: "var(--teal-gradient)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <TrendingUp size={18} color="#fff" />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: "0.82rem", fontWeight: "700", color: "#fff" }}>Leads Qualificados</div>
+                    <div style={{ fontSize: "0.72rem", color: "var(--pastel-sage)" }}>Recomendado no ChatGPT & Perplexity</div>
+                  </div>
+                </div>
+                <div style={{ background: "rgba(129, 172, 157, 0.15)", border: "1px solid var(--border-pastel-teal)", padding: "4px 10px", borderRadius: "99px", fontSize: "0.75rem", fontWeight: "700", color: "var(--pastel-sage)" }}>
+                  ROI Positivo
+                </div>
               </div>
-              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginTop: "4px" }}>Clientes Prontos Para Comprar</div>
             </div>
-
-            <div className="metric-box middle">
-              <div style={{ fontSize: "1.8rem", fontWeight: 800, color: "#fff" }}>Todas as IAs</div>
-              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginTop: "4px" }}>ChatGPT, Perplexity, Gemini & Copilot</div>
-            </div>
-
-            <div className="metric-box">
-              <div style={{ fontSize: "1.8rem", fontWeight: 800, color: "var(--blue-light)", display: "flex", alignItems: "center", justifyContent: "center", gap: "6px" }}>
-                <RefreshCw size={22} color="var(--blue-light)" /> + Recorrência
-              </div>
-              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginTop: "4px" }}>Estrutura para Recompra Contínua</div>
-            </div>
-          </div>
-
-          {/* Quick Checkpoints */}
-          <div style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "20px",
-            marginTop: "28px",
-            flexWrap: "wrap",
-            fontSize: "0.88rem",
-            color: "var(--text-muted)"
-          }}>
-            <span style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-              <CheckCircle2 size={16} color="var(--blue-cyan)" /> Linguagem simples e foco em conversão
-            </span>
-            <span style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-              <CheckCircle2 size={16} color="var(--blue-cyan)" /> Site rápido + Hospedagem SSL inclusa
-            </span>
-            <span style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-              <CheckCircle2 size={16} color="var(--blue-cyan)" /> Soluções comerciais homologadas
-            </span>
           </div>
 
         </div>
@@ -108,30 +119,14 @@ export default function Hero({ onOpenModal }) {
       </div>
 
       <style jsx>{`
-        .hero-metrics-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 20px;
-        }
-        .metric-box.middle {
-          border-left: 1px solid var(--border-glass);
-          border-right: 1px solid var(--border-glass);
-        }
-        @media (max-width: 768px) {
+        @media (max-width: 960px) {
           .hero-section {
-            padding-top: 110px !important;
-            padding-bottom: 50px !important;
+            padding-top: 105px !important;
+            padding-bottom: 40px !important;
           }
-          .hero-metrics-grid {
+          .hero-grid {
             grid-template-columns: 1fr !important;
-            gap: 16px !important;
-          }
-          .metric-box.middle {
-            border-left: none !important;
-            border-right: none !important;
-            border-top: 1px solid var(--border-glass) !important;
-            border-bottom: 1px solid var(--border-glass) !important;
-            padding: 16px 0 !important;
+            gap: 28px !important;
           }
         }
       `}</style>

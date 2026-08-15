@@ -26,7 +26,7 @@ export default function ScheduleModal({ isOpen, onClose }) {
       left: 0,
       right: 0,
       bottom: 0,
-      background: "rgba(3, 6, 14, 0.88)",
+      background: "rgba(19, 23, 34, 0.88)",
       backdropFilter: "blur(12px)",
       zIndex: 1000,
       display: "flex",
@@ -35,12 +35,12 @@ export default function ScheduleModal({ isOpen, onClose }) {
       padding: "20px"
     }}>
       <div className="glass-card" style={{
-        maxWidth: "540px",
+        maxWidth: "520px",
         width: "100%",
-        padding: "36px",
+        padding: "32px",
         position: "relative",
-        border: "1px solid var(--border-cyan)",
-        boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.9)"
+        border: "1px solid var(--border-pastel-blue)",
+        boxShadow: "var(--shadow-premium)"
       }}>
         
         <button
@@ -58,17 +58,17 @@ export default function ScheduleModal({ isOpen, onClose }) {
           <X size={24} />
         </button>
 
-        <h3 style={{ fontSize: "1.6rem", fontWeight: 800, color: "#fff", marginBottom: "8px" }}>
+        <h3 style={{ fontSize: "1.45rem", fontWeight: 800, color: "#fff", marginBottom: "6px" }}>
           Agendar Diagnóstico Executivo (R$ 494,00)
         </h3>
-        <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", marginBottom: "24px" }}>
-          Preencha os dados abaixo para direcionar seu atendimento diretamente ao consultor sênior no WhatsApp.
+        <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", marginBottom: "20px" }}>
+          Preencha seus dados para direcionar seu agendamento ao nosso consultor no WhatsApp.
         </p>
 
-        <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+        <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
           
           <div>
-            <label style={{ display: "block", fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "6px" }}>Seu Nome Completo</label>
+            <label style={{ display: "block", fontSize: "0.82rem", color: "var(--text-muted)", marginBottom: "4px" }}>Seu Nome Completo</label>
             <input
               type="text"
               required
@@ -77,19 +77,19 @@ export default function ScheduleModal({ isOpen, onClose }) {
               placeholder="Ex: Dr. Roberto Silva"
               style={{
                 width: "100%",
-                padding: "14px",
+                padding: "12px 14px",
                 borderRadius: "var(--radius-sm)",
-                background: "rgba(255,255,255,0.05)",
+                background: "rgba(255,255,255,0.04)",
                 border: "1px solid var(--border-glass)",
                 color: "#fff",
-                fontSize: "0.95rem",
+                fontSize: "0.92rem",
                 outline: "none"
               }}
             />
           </div>
 
           <div>
-            <label style={{ display: "block", fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "6px" }}>Nome da Empresa / Clínica</label>
+            <label style={{ display: "block", fontSize: "0.82rem", color: "var(--text-muted)", marginBottom: "4px" }}>Nome da Empresa / Clínica</label>
             <input
               type="text"
               required
@@ -98,19 +98,19 @@ export default function ScheduleModal({ isOpen, onClose }) {
               placeholder="Ex: Clínica Silva Odontologia"
               style={{
                 width: "100%",
-                padding: "14px",
+                padding: "12px 14px",
                 borderRadius: "var(--radius-sm)",
-                background: "rgba(255,255,255,0.05)",
+                background: "rgba(255,255,255,0.04)",
                 border: "1px solid var(--border-glass)",
                 color: "#fff",
-                fontSize: "0.95rem",
+                fontSize: "0.92rem",
                 outline: "none"
               }}
             />
           </div>
 
           <div>
-            <label style={{ display: "block", fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "6px" }}>WhatsApp de Contato</label>
+            <label style={{ display: "block", fontSize: "0.82rem", color: "var(--text-muted)", marginBottom: "4px" }}>WhatsApp de Contato</label>
             <input
               type="tel"
               required
@@ -119,36 +119,36 @@ export default function ScheduleModal({ isOpen, onClose }) {
               placeholder="(71) 99999-9999"
               style={{
                 width: "100%",
-                padding: "14px",
+                padding: "12px 14px",
                 borderRadius: "var(--radius-sm)",
-                background: "rgba(255,255,255,0.05)",
+                background: "rgba(255,255,255,0.04)",
                 border: "1px solid var(--border-glass)",
                 color: "#fff",
-                fontSize: "0.95rem",
+                fontSize: "0.92rem",
                 outline: "none"
               }}
             />
           </div>
 
           <div style={{
-            background: "rgba(37, 99, 235, 0.15)",
-            border: "1px solid var(--border-cyan)",
-            padding: "14px",
+            background: "rgba(124, 158, 188, 0.12)",
+            border: "1px solid var(--border-pastel-blue)",
+            padding: "12px",
             borderRadius: "var(--radius-sm)",
-            color: "var(--blue-cyan)",
-            fontSize: "0.9rem",
+            color: "var(--pastel-blue-light)",
+            fontSize: "0.86rem",
             fontWeight: 700,
             textAlign: "center"
           }}>
-            📋 Diagnóstico Executivo Completo — R$ 494,00 (Entregável em 48h)
+            📋 Diagnóstico Executivo — R$ 494,00 (Entregável em 48h)
           </div>
 
-          <button type="submit" className="btn-blue" style={{ marginTop: "8px", justifyContent: "center", padding: "16px" }}>
-            Continuar no WhatsApp <MessageCircle size={20} />
+          <button type="submit" className="btn-blue" style={{ marginTop: "6px", justifyContent: "center", padding: "14px" }}>
+            Continuar no WhatsApp <MessageCircle size={18} />
           </button>
 
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", fontSize: "0.8rem", color: "var(--text-dim)", marginTop: "8px" }}>
-            <ShieldCheck size={14} color="var(--blue-cyan)" /> Atendimento exclusivo DS IA. Sem fidelidade abusiva.
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "6px", fontSize: "0.78rem", color: "var(--text-dim)", marginTop: "4px" }}>
+            <ShieldCheck size={14} color="var(--pastel-teal)" /> Atendimento exclusivo DS IA. Sem burocracia.
           </div>
 
         </form>

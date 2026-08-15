@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { diagnosticQuestions } from "../data/diagnosticQuiz";
-import { FileText, ArrowRight, RotateCcw, CheckCircle, MessageCircle } from "lucide-react";
+import { FileText, ArrowRight, RotateCcw, CheckCircle, ShieldCheck } from "lucide-react";
 
 export default function InteractiveDiagnostic({ onOpenModal }) {
   const [currentStep, setCurrentStep] = useState(0);
@@ -34,163 +34,207 @@ export default function InteractiveDiagnostic({ onOpenModal }) {
   const totalLeak = Object.values(selectedAnswers).reduce((acc, curr) => acc + (curr.leak || 0), 0);
 
   const getMaturityLevel = (score) => {
-    if (score < 30) return { title: "Invisível / Alto Risco de Perda de Clientes", color: "#ef4444" };
-    if (score < 60) return { title: "Iniciante com Gargalos Severos de Lucro", color: "#f59e0b" };
-    if (score < 85) return { title: "Competitivo (Com Espaço para Dobrar Conversão)", color: "#60a5fa" };
-    return { title: "Dominante & Pronto para Alta Escala em IA", color: "#10b981" };
+    if (score < 30) return { title: "Invisível / Alto Risco de Perda de Clientes", color: "#e57373" };
+    if (score < 60) return { title: "Iniciante com Gargalos Severos de Lucro", color: "#f0b429" };
+    if (score < 85) return { title: "Competitivo (Com Espaço para Dobrar Conversão)", color: "var(--pastel-blue-light)" };
+    return { title: "Dominante & Pronto para Alta Escala em IA", color: "var(--pastel-teal)" };
   };
 
   const level = getMaturityLevel(totalScore);
 
   return (
-    <section id="simulador" className="section-padding" style={{ position: "relative" }}>
+    <section id="diagnostico" className="section-padding" style={{ position: "relative", background: "var(--bg-dark)", borderTop: "1px solid var(--border-glass)" }}>
       <div className="container">
         
-        <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 50px auto" }}>
+        <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 48px auto" }}>
           <div className="badge-blue">
-            <FileText size={16} /> Ferramenta Interativa de Diagnóstico
+            <FileText size={16} /> Diagnóstico Executivo de Entrada (R$ 494)
           </div>
-          <h2 style={{ fontSize: "2.5rem", fontWeight: 800, marginBottom: "16px" }}>
-            Simulador de Maturidade Digital & <span className="cyan-text">Lucro Reprimido</span>
+          <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 800, marginBottom: "16px" }}>
+            Simulador de Maturidade & <span className="teal-text">Lucro Reprimido</span>
           </h2>
-          <p style={{ color: "var(--text-muted)", fontSize: "1.1rem" }}>
-            Responda 4 perguntas rápidas para descobrir a nota da sua empresa e estimar o valor em Reais que está sendo perdido todos os meses.
+          <p style={{ color: "var(--text-muted)", fontSize: "1.05rem" }}>
+            Avalie o status da sua empresa no Google e no ChatGPT e descubra estimativas de receita reprimida em menos de 1 minuto.
           </p>
         </div>
 
-        <div style={{ maxWidth: "840px", margin: "0 auto" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "36px", alignItems: "center" }} className="diagnostic-grid">
           
-          {!showResults ? (
-            <div className="glass-card" style={{ padding: "40px", border: "1px solid var(--border-blue)" }}>
-              
-              {/* Progress bar */}
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "24px" }}>
-                <span style={{ fontSize: "0.875rem", color: "var(--blue-cyan)", fontWeight: 700 }}>
-                  Etapa {currentStep + 1} de {diagnosticQuestions.length} — {diagnosticQuestions[currentStep].category}
-                </span>
-                <span style={{ fontSize: "0.875rem", color: "var(--text-muted)" }}>
-                  {Math.round(((currentStep + 1) / diagnosticQuestions.length) * 100)}% concluído
-                </span>
-              </div>
-
-              <div style={{ background: "rgba(255,255,255,0.05)", height: "6px", borderRadius: "3px", marginBottom: "32px", overflow: "hidden" }}>
-                <div style={{ background: "var(--blue-gradient)", height: "100%", width: `${((currentStep + 1) / diagnosticQuestions.length) * 100}%`, transition: "width 0.3s ease" }}></div>
-              </div>
-
-              <h3 style={{ fontSize: "1.4rem", fontWeight: 700, marginBottom: "24px", color: "#fff", lineHeight: 1.4 }}>
-                {diagnosticQuestions[currentStep].question}
-              </h3>
-
-              {/* Options List */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "32px" }}>
-                {diagnosticQuestions[currentStep].options.map((option, idx) => {
-                  const isSelected = selectedAnswers[diagnosticQuestions[currentStep].id]?.text === option.text;
-                  return (
-                    <div
-                      key={idx}
-                      onClick={() => handleSelectOption(diagnosticQuestions[currentStep].id, option)}
-                      style={{
-                        padding: "18px 24px",
-                        borderRadius: "var(--radius-md)",
-                        background: isSelected ? "rgba(37, 99, 235, 0.2)" : "rgba(255,255,255,0.03)",
-                        border: isSelected ? "2px solid var(--blue-cyan)" : "1px solid var(--border-glass)",
-                        cursor: "pointer",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        transition: "all 0.2s ease"
-                      }}
-                    >
-                      <span style={{ fontSize: "1rem", color: isSelected ? "#fff" : "var(--text-muted)", fontWeight: isSelected ? 600 : 400 }}>
-                        {option.text}
-                      </span>
-                      <div style={{
-                        width: "22px",
-                        height: "22px",
-                        borderRadius: "50%",
-                        border: isSelected ? "6px solid var(--blue-cyan)" : "2px solid var(--text-dim)",
-                        background: isSelected ? "#050914" : "transparent"
-                      }}></div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Navigation button */}
-              <div style={{ display: "flex", justifyContent: "flex-end" }}>
-                <button
-                  className="btn-blue"
-                  disabled={!selectedAnswers[diagnosticQuestions[currentStep].id]}
-                  onClick={handleNext}
-                  style={{
-                    opacity: selectedAnswers[diagnosticQuestions[currentStep].id] ? 1 : 0.5,
-                    cursor: selectedAnswers[diagnosticQuestions[currentStep].id] ? "pointer" : "not-allowed"
-                  }}
-                >
-                  {currentStep < diagnosticQuestions.length - 1 ? "Próxima Pergunta" : "Gerar Raio-X Completo"} <ArrowRight size={18} />
-                </button>
-              </div>
-
+          {/* Left Column: Image Mockup & Offer Context */}
+          <div>
+            <div style={{
+              borderRadius: "var(--radius-md)",
+              overflow: "hidden",
+              border: "1px solid var(--border-pastel-blue)",
+              boxShadow: "var(--shadow-premium)",
+              marginBottom: "24px"
+            }}>
+              <img 
+                src="/images/diagnostic_mockup.png" 
+                alt="Relatório de Diagnóstico Executivo DS IA em tablet" 
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
             </div>
-          ) : (
-            
-            /* Results Screen */
-            <div className="glass-card" style={{ padding: "40px", border: "1px solid var(--border-cyan)", textAlign: "center" }}>
-              
-              <div style={{
-                width: "80px",
-                height: "80px",
-                borderRadius: "50%",
-                background: "rgba(37, 99, 235, 0.2)",
-                border: "2px solid var(--blue-cyan)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                margin: "0 auto 24px auto"
-              }}>
-                <FileText size={40} color="var(--blue-cyan)" />
-              </div>
 
-              <h3 style={{ fontSize: "1.8rem", fontWeight: 800, marginBottom: "8px" }}>
-                Resultado do Diagnóstico Prévio
-              </h3>
-              
-              <div style={{ fontSize: "1rem", color: level.color, fontWeight: 700, marginBottom: "32px" }}>
-                Nível de Maturidade: {level.title}
+            <div className="glass-card" style={{ padding: "24px", border: "1px solid var(--border-pastel-teal)" }}>
+              <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "#fff", marginBottom: "10px", display: "flex", alignItems: "center", gap: "8px" }}>
+                <ShieldCheck size={20} color="var(--pastel-teal)" />
+                O que você recebe no Diagnóstico Executivo (R$ 494):
               </div>
+              <ul style={{ listStyle: "none", color: "var(--text-muted)", fontSize: "0.9rem", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <li>✔ <strong>Relatório de Raio-X em PDF:</strong> Nota 0-100 da sua presença digital.</li>
+                <li>✔ <strong>Auditoria de Prontidão para IA:</strong> Teste real no ChatGPT, Gemini e Copilot.</li>
+                <li>✔ <strong>Plano de Ação de 90 Dias:</strong> Roteiro direto sem desperdício de verba.</li>
+                <li>✔ <strong>Reunião Estratégica em 48h (60 min):</strong> Apresentação individual com o consultor.</li>
+              </ul>
+            </div>
+          </div>
 
-              {/* Score and Leak Grid */}
-              <div className="grid-2" style={{ marginBottom: "40px" }}>
-                <div style={{ background: "rgba(0,0,0,0.4)", padding: "24px", borderRadius: "16px", border: "1px solid var(--border-glass)" }}>
-                  <span style={{ fontSize: "0.9rem", color: "var(--text-muted)", display: "block", marginBottom: "8px" }}>Nota de Maturidade Digital</span>
-                  <span style={{ fontSize: "3.2rem", fontWeight: 900, color: "var(--blue-cyan)" }}>{Math.round(totalScore)}<span style={{ fontSize: "1.5rem", color: "var(--text-muted)" }}>/100</span></span>
+          {/* Right Column: Quiz Simulator */}
+          <div>
+            {!showResults ? (
+              <div className="glass-card" style={{ padding: "32px", border: "1px solid var(--border-pastel-blue)" }}>
+                
+                {/* Progress bar */}
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "20px" }}>
+                  <span style={{ fontSize: "0.85rem", color: "var(--pastel-blue-light)", fontWeight: 700 }}>
+                    Etapa {currentStep + 1} de {diagnosticQuestions.length} — {diagnosticQuestions[currentStep].category}
+                  </span>
+                  <span style={{ fontSize: "0.82rem", color: "var(--text-muted)" }}>
+                    {Math.round(((currentStep + 1) / diagnosticQuestions.length) * 100)}% concluído
+                  </span>
                 </div>
 
-                <div style={{ background: "rgba(239, 68, 68, 0.08)", padding: "24px", borderRadius: "16px", border: "1px solid rgba(239, 68, 68, 0.3)" }}>
-                  <span style={{ fontSize: "0.9rem", color: "#fca5a5", display: "block", marginBottom: "8px" }}>Estimativa de Lucro Perdido/Mês</span>
-                  <span style={{ fontSize: "2.8rem", fontWeight: 900, color: "#ef4444" }}>R$ {totalLeak.toLocaleString("pt-BR")}</span>
+                <div style={{ background: "rgba(255,255,255,0.06)", height: "6px", borderRadius: "3px", marginBottom: "28px", overflow: "hidden" }}>
+                  <div style={{ background: "var(--blue-gradient)", height: "100%", width: `${((currentStep + 1) / diagnosticQuestions.length) * 100}%`, transition: "width 0.3s ease" }}></div>
                 </div>
+
+                <h3 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: "20px", color: "#fff", lineHeight: 1.4 }}>
+                  {diagnosticQuestions[currentStep].question}
+                </h3>
+
+                {/* Options List */}
+                <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "28px" }}>
+                  {diagnosticQuestions[currentStep].options.map((option, idx) => {
+                    const isSelected = selectedAnswers[diagnosticQuestions[currentStep].id]?.text === option.text;
+                    return (
+                      <div
+                        key={idx}
+                        onClick={() => handleSelectOption(diagnosticQuestions[currentStep].id, option)}
+                        style={{
+                          padding: "14px 20px",
+                          borderRadius: "var(--radius-sm)",
+                          background: isSelected ? "rgba(124, 158, 188, 0.2)" : "rgba(255,255,255,0.02)",
+                          border: isSelected ? "2px solid var(--pastel-blue)" : "1px solid var(--border-glass)",
+                          cursor: "pointer",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          transition: "all 0.2s ease"
+                        }}
+                      >
+                        <span style={{ fontSize: "0.92rem", color: isSelected ? "#fff" : "var(--text-muted)", fontWeight: isSelected ? 600 : 400 }}>
+                          {option.text}
+                        </span>
+                        <div style={{
+                          width: "20px",
+                          height: "20px",
+                          borderRadius: "50%",
+                          border: isSelected ? "5px solid var(--pastel-blue)" : "2px solid var(--text-dim)",
+                          background: isSelected ? "var(--bg-dark)" : "transparent"
+                        }}></div>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Navigation button */}
+                <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                  <button
+                    className="btn-blue"
+                    disabled={!selectedAnswers[diagnosticQuestions[currentStep].id]}
+                    onClick={handleNext}
+                    style={{
+                      padding: "12px 24px",
+                      fontSize: "0.92rem",
+                      opacity: selectedAnswers[diagnosticQuestions[currentStep].id] ? 1 : 0.5,
+                      cursor: selectedAnswers[diagnosticQuestions[currentStep].id] ? "pointer" : "not-allowed"
+                    }}
+                  >
+                    {currentStep < diagnosticQuestions.length - 1 ? "Próxima Pergunta" : "Ver Diagnóstico Completo"} <ArrowRight size={16} />
+                  </button>
+                </div>
+
               </div>
+            ) : (
+              
+              /* Results Screen */
+              <div className="glass-card" style={{ padding: "32px", border: "1px solid var(--border-pastel-teal)", textAlign: "center" }}>
+                
+                <div style={{
+                  width: "64px",
+                  height: "64px",
+                  borderRadius: "50%",
+                  background: "rgba(129, 172, 157, 0.18)",
+                  border: "2px solid var(--pastel-teal)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  margin: "0 auto 16px auto"
+                }}>
+                  <FileText size={32} color="var(--pastel-teal)" />
+                </div>
 
-              <p style={{ color: "var(--text-muted)", fontSize: "1rem", lineHeight: 1.6, marginBottom: "32px", maxWidth: "680px", margin: "0 auto 32px auto" }}>
-                Sua empresa possui gargalos sérios na captura de clientes e presença nos motores de IA. Contrate nosso <strong>Diagnóstico Executivo Pago (R$ 494,00)</strong> com a equipe da DS IA para receber o plano de correção completo em 48h.
-              </p>
+                <h3 style={{ fontSize: "1.5rem", fontWeight: 800, marginBottom: "6px" }}>
+                  Resultado do Diagnóstico Prévio
+                </h3>
+                
+                <div style={{ fontSize: "0.92rem", color: level.color, fontWeight: 700, marginBottom: "24px" }}>
+                  Status: {level.title}
+                </div>
 
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
-                <button className="btn-blue" onClick={onOpenModal} style={{ fontSize: "1.05rem", padding: "16px 32px" }}>
-                  Agendar Diagnóstico Oficial (R$ 494) <ArrowRight size={20} />
-                </button>
-                <button className="btn-outline" onClick={handleReset} style={{ fontSize: "1rem", padding: "16px 24px" }}>
-                  Refazer Simulador <RotateCcw size={16} />
-                </button>
+                {/* Score and Leak Grid */}
+                <div className="grid-2" style={{ marginBottom: "28px" }}>
+                  <div style={{ background: "rgba(0,0,0,0.3)", padding: "18px", borderRadius: "12px", border: "1px solid var(--border-glass)" }}>
+                    <span style={{ fontSize: "0.8rem", color: "var(--text-muted)", display: "block", marginBottom: "4px" }}>Nota da Presença Digital</span>
+                    <span style={{ fontSize: "2.4rem", fontWeight: 900, color: "var(--pastel-blue-light)" }}>{Math.round(totalScore)}<span style={{ fontSize: "1.2rem", color: "var(--text-muted)" }}>/100</span></span>
+                  </div>
+
+                  <div style={{ background: "rgba(229, 115, 115, 0.08)", padding: "18px", borderRadius: "12px", border: "1px solid rgba(229, 115, 115, 0.3)" }}>
+                    <span style={{ fontSize: "0.8rem", color: "#fca5a5", display: "block", marginBottom: "4px" }}>Lucro Reprimido Estimado/Mês</span>
+                    <span style={{ fontSize: "2.2rem", fontWeight: 900, color: "#e57373" }}>R$ {totalLeak.toLocaleString("pt-BR")}</span>
+                  </div>
+                </div>
+
+                <p style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.5, marginBottom: "24px" }}>
+                  Receba o mapa completo de correções com o nosso <strong>Diagnóstico Executivo Pago (R$ 494,00)</strong> em até 48h.
+                </p>
+
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "12px", flexWrap: "wrap" }}>
+                  <button className="btn-blue" onClick={onOpenModal} style={{ fontSize: "0.95rem", padding: "14px 24px" }}>
+                    Agendar Diagnóstico (R$ 494) <ArrowRight size={18} />
+                  </button>
+                  <button className="btn-outline" onClick={handleReset} style={{ fontSize: "0.9rem", padding: "14px 20px" }}>
+                    Refazer Simulador <RotateCcw size={16} />
+                  </button>
+                </div>
+
               </div>
-
-            </div>
-          )}
+            )}
+          </div>
 
         </div>
 
       </div>
+
+      <style jsx>{`
+        @media (max-width: 960px) {
+          .diagnostic-grid {
+            grid-template-columns: 1fr !important;
+            gap: 28px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

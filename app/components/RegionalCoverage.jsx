@@ -1,39 +1,39 @@
 "use client";
 
-import { MapPin, ShieldCheck, CheckCircle2, ArrowRight } from "lucide-react";
+import { MapPin, ArrowRight } from "lucide-react";
 
 export default function RegionalCoverage({ onOpenModal }) {
   const regions = [
-    { city: "Salvador (Capital)", places: "Horto Florestal, Caminho das Árvores, Pituba, Graça, Itaigara, Ondina, Vitória, Barra, Alphaville Salvador, Stella Maris" },
+    { city: "Salvador (Capital)", places: "Horto Florestal, Caminho das Árvores, Pituba, Graça, Itaigara, Ondina, Vitória, Barra, Alphaville Salvador" },
     { city: "Lauro de Freitas", places: "Vilas do Atlântico, Busca Vida, Estrada do Coco, Buraquinho, Miragem" },
-    { city: "Camaçari", places: "Alphaville Litoral Norte, Guarajuba, Praia do Forte, Abrantes" },
+    { city: "Camaçari & Litoral Norte", places: "Alphaville Litoral Norte, Guarajuba, Praia do Forte, Abrantes" },
     { city: "Região Metropolitana", places: "Simões Filho, Candeias, Dias d'Ávila, Mata de São João" }
   ];
 
   return (
-    <section id="cobertura-regional" className="section-padding" style={{ background: "#050914", borderTop: "1px solid rgba(0, 242, 254, 0.1)" }}>
+    <section id="cobertura-regional" className="section-padding" style={{ background: "var(--bg-dark)", borderTop: "1px solid var(--border-glass)" }}>
       <div className="container">
         
-        <div style={{ textAlign: "center", maxWidth: "840px", margin: "0 auto 50px auto" }}>
+        <div style={{ textAlign: "center", maxWidth: "840px", margin: "0 auto 40px auto" }}>
           <div className="badge-blue">
-            <MapPin size={16} /> Cobertura Geográfica Regional AIO / GEO
+            <MapPin size={15} /> Presença Regional GEO / AIO
           </div>
-          <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.7rem)", fontWeight: 800, marginBottom: "16px" }}>
-            Sua Empresa Dominando as Buscas de IA em <span className="cyan-text">Salvador e Região Metropolitana</span>
+          <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 800, marginBottom: "16px" }}>
+            Dominando Buscas Locais em <span className="teal-text">Salvador e Região Metropolitana</span>
           </h2>
-          <p style={{ color: "var(--text-muted)", fontSize: "1.1rem", lineHeight: 1.6 }}>
-            Injetamos no código da sua empresa os dados geográficos e os microrregiões exatos para que o <strong>ChatGPT, Perplexity, Gemini, Claude e Copilot</strong> recomendem seu negócio nas buscas locais da Bahia.
+          <p style={{ color: "var(--text-muted)", fontSize: "1.05rem" }}>
+            Injetamos dados geográficos no código da sua empresa para que as IAs recomendem seus serviços nos bairros nobres de maior poder aquisitivo.
           </p>
         </div>
 
-        <div className="grid-2" style={{ marginBottom: "40px" }}>
+        <div className="grid-2" style={{ marginBottom: "36px" }}>
           {regions.map((reg, idx) => (
-            <div key={idx} className="glass-card" style={{ padding: "28px", border: "1px solid var(--border-glass)" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "10px", color: "var(--blue-cyan)", fontWeight: 800, fontSize: "1.2rem", marginBottom: "10px" }}>
-                <MapPin size={22} color="var(--blue-cyan)" /> {reg.city}
+            <div key={idx} className="glass-card" style={{ padding: "24px", border: "1px solid var(--border-glass)" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "var(--pastel-blue-light)", fontWeight: 800, fontSize: "1.1rem", marginBottom: "8px" }}>
+                <MapPin size={18} color="var(--pastel-teal)" /> {reg.city}
               </div>
-              <p style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.6 }}>
-                📍 <strong>Microrregiões & Bairros Mapeados:</strong> {reg.places}
+              <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.5 }}>
+                📍 <strong>Bairros Mapeados:</strong> {reg.places}
               </p>
             </div>
           ))}
@@ -41,27 +41,27 @@ export default function RegionalCoverage({ onOpenModal }) {
 
         {/* Local AI Assurance Card */}
         <div style={{
-          background: "linear-gradient(135deg, rgba(11, 19, 38, 0.9) 0%, rgba(37, 99, 235, 0.15) 100%)",
-          border: "1px solid var(--border-cyan)",
+          background: "linear-gradient(135deg, rgba(28, 34, 48, 0.95) 0%, rgba(124, 158, 188, 0.12) 100%)",
+          border: "1px solid var(--border-pastel-blue)",
           borderRadius: "var(--radius-md)",
-          padding: "32px 28px",
+          padding: "28px 24px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           flexWrap: "wrap",
-          gap: "20px"
+          gap: "16px"
         }}>
           <div>
-            <h3 style={{ fontSize: "1.35rem", color: "#fff", fontWeight: 800, marginBottom: "6px" }}>
-              Quer Ser a 1ª Opção Indicada pelas IAs em Salvador e Região?
+            <h3 style={{ fontSize: "1.25rem", color: "#fff", fontWeight: 800, marginBottom: "4px" }}>
+              Quer Ser Recomendado na Sua Cidade?
             </h3>
-            <p style={{ color: "var(--text-muted)", fontSize: "0.95rem" }}>
-              Agende o Diagnóstico Executivo de R$ 494,00 e receba a auditoria local completa do seu negócio em 48h.
+            <p style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}>
+              Receba o Raio-X geográfico completo do seu negócio em até 48h no Diagnóstico Executivo (R$ 494).
             </p>
           </div>
           <div>
-            <button className="btn-blue" onClick={onOpenModal} style={{ fontSize: "0.98rem", padding: "14px 28px" }}>
-              Agendar Diagnóstico em Salvador (R$ 494) <ArrowRight size={18} />
+            <button className="btn-blue" onClick={onOpenModal} style={{ fontSize: "0.92rem", padding: "12px 24px" }}>
+              Agendar Diagnóstico Local (R$ 494) <ArrowRight size={16} />
             </button>
           </div>
         </div>
