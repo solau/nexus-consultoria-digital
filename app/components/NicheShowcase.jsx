@@ -1,24 +1,14 @@
 "use client";
 
 import { targetNiches } from "../data/targetNiches";
-import { Target, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 export default function NicheShowcase({ onOpenModal }) {
   return (
     <section className="section-padding" style={{ background: "var(--bg-dark)", borderTop: "1px solid var(--border-glass)" }}>
       <div className="container">
         
-        <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 48px auto" }}>
-          <div className="badge-blue">
-            <Target size={16} /> Estratégia de Mercado DS IA
-          </div>
-          <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 800, marginBottom: "16px" }}>
-            Desenhado para Empresas onde <span className="teal-text">1 Único Cliente Cobre o Investimento</span>
-          </h2>
-          <p style={{ color: "var(--text-muted)", fontSize: "1.05rem" }}>
-            Estratégias sob medida para PMEs com alto ticket médio que exigem autoridade máxima no Google e ChatGPT.
-          </p>
-        </div>
+
 
         {/* Niche Banner Collage Image */}
         <div style={{
