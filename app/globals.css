@@ -1,50 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  /* Executive Pastel Color Palette */
-  --bg-dark: #131722;
-  --bg-card: #1c2230;
-  --bg-card-hover: #232a3b;
-  --bg-glass: rgba(28, 34, 48, 0.85);
+  /* Executive Dendê Pastel Color Palette (Light Mode) */
+  --bg-dark: #fcfbfa; /* Off-white/cream base */
+  --bg-card: #ffffff; /* Pure white for cards */
+  --bg-card-hover: #faf9f7;
+  --bg-glass: rgba(255, 255, 255, 0.85);
   
-  /* Pastel Accent Tokens */
-  --pastel-blue: #7c9ebc;
-  --pastel-blue-light: #a4c2dc;
-  --pastel-indigo: #8b9bb4;
-  --pastel-teal: #81ac9d;
-  --pastel-sage: #9bbca8;
-  --pastel-gold: #d8c397;
-  --pastel-lavender: #9e9ab8;
+  /* Dendê Pastel Accent Tokens */
+  --dende-main: #f5a623; /* Muted orange/dendê */
+  --dende-light: #fbd69c;
+  --pastel-gold: #e2c073;
+  --pastel-terracotta: #d9886a;
+  --pastel-yellow: #f8e5b0;
+  --pastel-sand: #e6dfd1;
+  --pastel-blue-light: #a4c2dc; /* For subtle accents */
   
   /* Pastel Gradients */
-  --blue-gradient: linear-gradient(135deg, #7c9ebc 0%, #5c7e9c 100%);
-  --teal-gradient: linear-gradient(135deg, #81ac9d 0%, #689384 100%);
-  --pastel-gradient: linear-gradient(135deg, #a4c2dc 0%, #81ac9d 50%, #d8c397 100%);
-  --gold-gradient: linear-gradient(135deg, #d8c397 0%, #b8a173 100%);
+  --dende-gradient: linear-gradient(135deg, #f5a623 0%, #d9886a 100%);
+  --gold-gradient: linear-gradient(135deg, #e2c073 0%, #c4a157 100%);
+  --pastel-gradient: linear-gradient(135deg, #fbd69c 0%, #f8e5b0 50%, #e2c073 100%);
 
   /* Soft Glows */
-  --blue-glow: rgba(124, 158, 188, 0.18);
-  --teal-glow: rgba(129, 172, 157, 0.18);
-  --gold-glow: rgba(216, 195, 151, 0.18);
+  --dende-glow: rgba(245, 166, 35, 0.15);
+  --gold-glow: rgba(226, 192, 115, 0.15);
+  --sand-glow: rgba(230, 223, 209, 0.4);
   
-  /* Typography Colors */
-  --text-main: #f1f3f7;
-  --text-muted: #9faec2;
-  --text-dim: #6c7c93;
+  /* Typography Colors - Light Theme */
+  --text-main: #2a2b2e; /* Dark gray for readability */
+  --text-muted: #5e646e; /* Medium gray */
+  --text-dim: #8b929b; /* Light gray */
 
   /* Pastel Borders */
-  --border-glass: rgba(255, 255, 255, 0.08);
-  --border-pastel-blue: rgba(124, 158, 188, 0.35);
-  --border-pastel-teal: rgba(129, 172, 157, 0.35);
-  --border-pastel-gold: rgba(216, 195, 151, 0.35);
+  --border-glass: rgba(0, 0, 0, 0.05);
+  --border-dende: rgba(245, 166, 35, 0.3);
+  --border-gold: rgba(226, 192, 115, 0.3);
   
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-full: 9999px;
   
-  --shadow-premium: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
-  --shadow-pastel: 0 10px 30px -10px rgba(124, 158, 188, 0.25);
+  --shadow-premium: 0 15px 35px -10px rgba(0, 0, 0, 0.08);
+  --shadow-pastel: 0 10px 30px -10px rgba(245, 166, 35, 0.15);
 }
 
 * {
@@ -76,11 +74,11 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--bg-dark);
 }
 ::-webkit-scrollbar-thumb {
-  background: #252e40;
+  background: #e6dfd1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--pastel-blue);
+  background: var(--dende-main);
 }
 
 /* Giant Stat Utility Classes for 1-Second Scanning */
@@ -102,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stat-card-snack:hover {
-  border-color: var(--border-pastel-blue);
+  border-color: var(--border-dende);
   transform: translateY(-4px);
   box-shadow: var(--shadow-pastel);
 }
@@ -113,20 +111,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 650px;
   height: 650px;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--blue-glow) 0%, rgba(19, 23, 34, 0) 70%);
+  background: radial-gradient(circle, var(--dende-glow) 0%, rgba(252, 251, 250, 0) 70%);
   pointer-events: none;
   z-index: 0;
 }
 
-.blue-text {
-  background: var(--blue-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-}
-
-.cyan-text, .teal-text {
-  background: linear-gradient(135deg, #a4c2dc 0%, #81ac9d 100%);
+.dende-text {
+  background: var(--dende-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -139,8 +130,8 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
 }
 
-.blue-border-glow {
-  border: 1px solid var(--border-pastel-blue);
+.dende-border-glow {
+  border: 1px solid var(--border-dende);
   box-shadow: var(--shadow-pastel);
 }
 
@@ -155,13 +146,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .glass-card:hover {
-  border-color: var(--border-pastel-blue);
+  border-color: var(--border-dende);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-premium), 0 0 25px rgba(124, 158, 188, 0.15);
+  box-shadow: var(--shadow-premium), 0 0 25px rgba(245, 166, 35, 0.1);
 }
 
-.btn-blue {
-  background: var(--blue-gradient);
+.btn-dende {
+  background: var(--dende-gradient);
   color: #ffffff;
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
@@ -175,13 +166,13 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   font-size: 1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(124, 158, 188, 0.3);
+  box-shadow: 0 4px 20px rgba(245, 166, 35, 0.25);
   text-align: center;
 }
 
-.btn-blue:hover {
+.btn-dende:hover {
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 30px rgba(129, 172, 157, 0.4);
+  box-shadow: 0 8px 30px rgba(245, 166, 35, 0.35);
 }
 
 .btn-outline {
@@ -191,7 +182,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   padding: 14px 28px;
   border-radius: var(--radius-full);
-  border: 1px solid var(--border-pastel-blue);
+  border: 1px solid var(--border-dende);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -203,9 +194,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-outline:hover {
-  background: rgba(124, 158, 188, 0.12);
-  border-color: var(--pastel-blue);
-  color: var(--pastel-blue-light);
+  background: rgba(245, 166, 35, 0.08);
+  border-color: var(--dende-main);
+  color: var(--dende-main);
 }
 
 /* Section Container */
@@ -220,15 +211,15 @@ h1, h2, h3, h4, h5, h6 {
   padding: 70px 0;
 }
 
-.badge-blue {
+.badge-dende {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 6px 16px;
-  background: rgba(124, 158, 188, 0.12);
-  border: 1px solid rgba(124, 158, 188, 0.3);
+  background: rgba(245, 166, 35, 0.1);
+  border: 1px solid rgba(245, 166, 35, 0.25);
   border-radius: var(--radius-full);
-  color: var(--pastel-blue-light);
+  color: var(--dende-main);
   font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -285,7 +276,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 16px !important;
   }
 
-  .btn-blue, .btn-outline {
+  .btn-dende, .btn-outline {
     width: 100% !important;
     justify-content: center !important;
     padding: 13px 16px !important;

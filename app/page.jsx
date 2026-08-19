@@ -2,21 +2,17 @@
 
 import { useState } from "react";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import QuickStatsBanner from "./components/QuickStatsBanner";
-import BeforeAfterComparison from "./components/BeforeAfterComparison";
-import NicheShowcase from "./components/NicheShowcase";
-import PainPointsSection from "./components/PainPointsSection";
-import AISearchSection from "./components/AISearchSection";
-import RegionalCoverage from "./components/RegionalCoverage";
-import InteractiveDiagnostic from "./components/InteractiveDiagnostic";
-import DeliverablesChecklist from "./components/DeliverablesChecklist";
-import MonthlyPlans from "./components/MonthlyPlans";
-import SoftwareHubSection from "./components/SoftwareHubSection";
-import PartnerHub from "./components/PartnerHub";
-import FAQAccordion from "./components/FAQAccordion";
 import Footer from "./components/Footer";
 import ScheduleModal from "./components/ScheduleModal";
+
+import AioHero from "./components/AioHero";
+import AioIntro from "./components/AioIntro";
+import AioServices from "./components/AioServices";
+import AioHowItWorks from "./components/AioHowItWorks";
+import AioToolsCta from "./components/AioToolsCta";
+import AioWhyUs from "./components/AioWhyUs";
+import FAQAccordion from "./components/FAQAccordion";
+import AioContactForm from "./components/AioContactForm";
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -28,53 +24,21 @@ export default function Home() {
     <main style={{ minHeight: "100vh", background: "var(--bg-dark)" }}>
       <Navbar onOpenModal={handleOpenModal} />
       
-      <Hero onOpenModal={handleOpenModal} />
+      <AioHero onOpenModal={handleOpenModal} />
 
-      <QuickStatsBanner />
+      <AioIntro />
 
-      <div id="comparativo">
-        <BeforeAfterComparison onOpenModal={handleOpenModal} />
-      </div>
+      <AioServices />
 
-      <div id="nichos">
-        <NicheShowcase onOpenModal={handleOpenModal} />
-      </div>
+      <AioHowItWorks />
 
-      <div id="dores">
-        <PainPointsSection onOpenModal={handleOpenModal} />
-      </div>
-      
-      <div id="tecnologia-ia">
-        <AISearchSection />
-      </div>
+      <AioToolsCta onOpenModal={handleOpenModal} />
 
-      <div id="cobertura-regional">
-        <RegionalCoverage onOpenModal={handleOpenModal} />
-      </div>
-      
-      <div id="diagnostico">
-        <InteractiveDiagnostic onOpenModal={handleOpenModal} />
-      </div>
+      <AioWhyUs />
 
-      <div id="entregaveis">
-        <DeliverablesChecklist />
-      </div>
+      <FAQAccordion />
 
-      <div id="assessoria">
-        <MonthlyPlans onOpenModal={handleOpenModal} />
-      </div>
-
-      <div id="sistemas">
-        <SoftwareHubSection onOpenModal={handleOpenModal} />
-      </div>
-
-      <div id="solucoes-certificadas">
-        <PartnerHub onOpenModal={handleOpenModal} />
-      </div>
-
-      <div id="faq">
-        <FAQAccordion />
-      </div>
+      <AioContactForm />
 
       <Footer onOpenModal={handleOpenModal} />
 
