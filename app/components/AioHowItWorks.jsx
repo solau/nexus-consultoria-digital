@@ -4,11 +4,11 @@ export default function AioHowItWorks() {
   const steps = [
     {
       title: "1. Diagnóstico",
-      desc: "Auditamos a presença atual da sua empresa nas principais IAs generativas — ChatGPT, Perplexity e Google AI Overviews. O resultado é um diagnóstico com prioridades claras."
+      desc: "Auditamos a presença atual da sua empresa nas principais IAs generativas, como ChatGPT, Perplexity e Google AI Overviews. O resultado é um diagnóstico com prioridades claras."
     },
     {
       title: "2. Estratégia",
-      desc: "Definimos os temas de autoridade do seu negócio — os assuntos em que sua empresa precisa ser reconhecida como referência pelas IAs. Montamos um plano de ação."
+      desc: "Definimos os temas de autoridade do seu negócio. Mapeamos os assuntos nos quais sua empresa precisa ser reconhecida como referência pelas IAs e montamos um plano de ação estratégico."
     },
     {
       title: "3. Implementação",

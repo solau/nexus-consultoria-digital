@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Cpu, Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar({ onOpenModal }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -13,7 +14,7 @@ export default function Navbar({ onOpenModal }) {
       left: 0,
       right: 0,
       zIndex: 100,
-      background: "rgba(19, 23, 34, 0.92)",
+      background: "var(--bg-glass)",
       backdropFilter: "blur(20px)",
       WebkitBackdropFilter: "blur(20px)",
       borderBottom: "1px solid var(--border-glass)",
@@ -27,42 +28,37 @@ export default function Navbar({ onOpenModal }) {
             width: "42px",
             height: "42px",
             borderRadius: "12px",
-            background: "var(--blue-gradient)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            boxShadow: "0 4px 15px rgba(124, 158, 188, 0.3)"
+            overflow: "hidden",
+            boxShadow: "0 4px 15px rgba(245, 166, 35, 0.15)"
           }}>
-            <Cpu size={24} color="#ffffff" />
+            <img src="/logo.jpg" alt="Dendê IA Logo" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
           </div>
           <div>
-            <span style={{ fontSize: "1.45rem", fontWeight: "900", color: "#fff", letterSpacing: "-0.03em" }}>
-              DS <span className="teal-text">IA</span>
+            <span style={{ fontSize: "1.45rem", fontWeight: "900", color: "var(--text-main)", letterSpacing: "-0.03em" }}>
+              Dendê <span className="dende-text">IA</span>
             </span>
-            <span style={{ display: "block", fontSize: "0.65rem", color: "var(--pastel-blue-light)", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 700 }}>
-              DIGITAL STRATEGY & AI
+            <span style={{ display: "block", fontSize: "0.65rem", color: "var(--text-muted)", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 700 }}>
+              ESTRATÉGIA DIGITAL & AI
             </span>
           </div>
         </a>
 
         {/* Desktop Menu */}
         <nav className="desktop-menu" style={{ display: "flex", alignItems: "center", gap: "24px" }}>
-          <a href="#diagnostico" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.92rem", fontWeight: "500", transition: "color 0.2s" }}>Diagnóstico (R$ 494)</a>
-          <a href="#entregaveis" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.92rem", fontWeight: "500", transition: "color 0.2s" }}>Entregáveis</a>
-          <a href="#tecnologia-ia" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.92rem", fontWeight: "500", transition: "color 0.2s" }}>Presença em IA</a>
-          <a href="#assessoria" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.92rem", fontWeight: "500", transition: "color 0.2s" }}>Assessoria Growth</a>
-          <a href="#solucoes-certificadas" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.92rem", fontWeight: "500", transition: "color 0.2s" }}>Ecossistema de Soluções</a>
+          <a href="#o-que-fazemos" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.92rem", fontWeight: "500", transition: "color 0.2s" }}>O que fazemos</a>
+          <a href="#como-funciona" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.92rem", fontWeight: "500", transition: "color 0.2s" }}>Como funciona</a>
+          <a href="#contato" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.92rem", fontWeight: "500", transition: "color 0.2s" }}>Contato</a>
         </nav>
 
         {/* CTA Button & Mobile Toggle */}
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-          <button className="btn-blue" onClick={onOpenModal} style={{ padding: "10px 22px", fontSize: "0.88rem" }}>
+          <button className="btn-dende" onClick={onOpenModal} style={{ padding: "10px 22px", fontSize: "0.88rem" }}>
             Agendar Diagnóstico <ArrowRight size={16} />
           </button>
           
           <button 
             onClick={() => setMobileOpen(!mobileOpen)}
-            style={{ background: "none", border: "none", color: "#fff", cursor: "pointer", display: "none" }}
+            style={{ background: "none", border: "none", color: "var(--text-main)", cursor: "pointer", display: "none" }}
             className="mobile-toggle"
           >
             {mobileOpen ? <X size={28} /> : <Menu size={28} />}
@@ -75,17 +71,15 @@ export default function Navbar({ onOpenModal }) {
       {mobileOpen && (
         <div style={{
           background: "var(--bg-card)",
-          borderBottom: "1px solid var(--border-pastel-blue)",
+          borderBottom: "1px solid var(--border-dende)",
           padding: "24px",
           display: "flex",
           flexDirection: "column",
           gap: "16px"
         }}>
-          <a href="#diagnostico" onClick={() => setMobileOpen(false)} style={{ color: "#fff", textDecoration: "none", fontSize: "1rem", fontWeight: "600" }}>Diagnóstico Executivo</a>
-          <a href="#entregaveis" onClick={() => setMobileOpen(false)} style={{ color: "#fff", textDecoration: "none", fontSize: "1rem", fontWeight: "600" }}>Entregáveis</a>
-          <a href="#tecnologia-ia" onClick={() => setMobileOpen(false)} style={{ color: "#fff", textDecoration: "none", fontSize: "1rem", fontWeight: "600" }}>Presença em IA</a>
-          <a href="#assessoria" onClick={() => setMobileOpen(false)} style={{ color: "#fff", textDecoration: "none", fontSize: "1rem", fontWeight: "600" }}>Assessoria Growth</a>
-          <a href="#solucoes-certificadas" onClick={() => setMobileOpen(false)} style={{ color: "#fff", textDecoration: "none", fontSize: "1rem", fontWeight: "600" }}>Ecossistema de Soluções</a>
+          <a href="#o-que-fazemos" onClick={() => setMobileOpen(false)} style={{ color: "var(--text-main)", textDecoration: "none", fontSize: "1rem", fontWeight: "600" }}>O que fazemos</a>
+          <a href="#como-funciona" onClick={() => setMobileOpen(false)} style={{ color: "var(--text-main)", textDecoration: "none", fontSize: "1rem", fontWeight: "600" }}>Como funciona</a>
+          <a href="#contato" onClick={() => setMobileOpen(false)} style={{ color: "var(--text-main)", textDecoration: "none", fontSize: "1rem", fontWeight: "600" }}>Contato</a>
         </div>
       )}
 
@@ -102,4 +96,3 @@ export default function Navbar({ onOpenModal }) {
     </header>
   );
 }
-

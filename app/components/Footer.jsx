@@ -1,57 +1,49 @@
 "use client";
 
-import { Cpu, ShieldCheck } from "lucide-react";
-
 export default function Footer({ onOpenModal }) {
   return (
-    <footer style={{ background: "#0e111a", borderTop: "1px solid var(--border-glass)", padding: "48px 0 28px 0" }}>
+    <footer style={{ background: "var(--bg-card)", borderTop: "1px solid var(--border-glass)", padding: "48px 0 28px 0" }}>
       <div className="container">
         
         <div className="footer-grid" style={{ marginBottom: "36px" }}>
           
           <div>
             <a href="#" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none", marginBottom: "14px" }}>
-              <div style={{ width: "36px", height: "36px", borderRadius: "10px", background: "var(--blue-gradient)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <Cpu size={20} color="#ffffff" />
+              <div style={{ width: "36px", height: "36px", borderRadius: "10px", overflow: "hidden" }}>
+                <img src="/logo.jpg" alt="Dendê IA Logo" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </div>
-              <span style={{ fontSize: "1.3rem", fontWeight: "900", color: "#fff" }}>
-                DS <span className="teal-text">IA</span>
+              <span style={{ fontSize: "1.3rem", fontWeight: "900", color: "var(--text-main)" }}>
+                Dendê <span className="dende-text">IA</span>
               </span>
             </a>
             <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.55, maxWidth: "340px", marginBottom: "16px" }}>
-              Consultoria Executiva de Presença Digital, Alta Velocidade Web e Recomendação em Inteligência Artificial para PMEs.
+              Consultoria Executiva de Presença Digital, Alta Velocidade Web e Otimização para Inteligência Artificial para PMEs.
             </p>
-            <div style={{ display: "flex", alignItems: "center", gap: "6px", color: "var(--pastel-teal)", fontSize: "0.82rem", fontWeight: 600 }}>
-              <ShieldCheck size={16} /> Padrão Executivo de Qualidade & Busca em IA
-            </div>
           </div>
 
           <div>
-            <h4 style={{ color: "#fff", fontSize: "0.95rem", marginBottom: "14px", fontWeight: 700 }}>Navegação Executiva</h4>
+            <h4 style={{ color: "var(--text-main)", fontSize: "0.95rem", marginBottom: "14px", fontWeight: 700 }}>Navegação Executiva</h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "8px", fontSize: "0.88rem" }}>
-              <li><a href="#diagnostico" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Diagnóstico (R$ 494)</a></li>
-              <li><a href="#entregaveis" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Entregáveis</a></li>
-              <li><a href="#tecnologia-ia" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Presença em IA</a></li>
-              <li><a href="#assessoria" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Assessoria Growth</a></li>
-              <li><a href="#solucoes-certificadas" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Ecossistema de Soluções</a></li>
-              <li><a href="#faq" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Dúvidas Frequentes</a></li>
+              <li><a href="#o-que-fazemos" style={{ color: "var(--text-muted)", textDecoration: "none" }}>O que fazemos</a></li>
+              <li><a href="#como-funciona" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Como funciona</a></li>
+              <li><a href="#contato" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Contato</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 style={{ color: "#fff", fontSize: "0.95rem", marginBottom: "14px", fontWeight: 700 }}>Atendimento Direto</h4>
+            <h4 style={{ color: "var(--text-main)", fontSize: "0.95rem", marginBottom: "14px", fontWeight: 700 }}>Atendimento Direto</h4>
             <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.5, marginBottom: "16px" }}>
-              Diagnóstico individual presencial ou online com nosso consultor sênior.
+              Diagnóstico individual online com nosso consultor especializado.
             </p>
-            <button className="btn-blue" onClick={onOpenModal} style={{ padding: "12px 20px", fontSize: "0.88rem", width: "100%", justifyContent: "center" }}>
-              Agendar Diagnóstico (R$ 494)
+            <button className="btn-dende" onClick={onOpenModal} style={{ padding: "12px 20px", fontSize: "0.88rem", width: "100%", justifyContent: "center" }}>
+              Agendar Diagnóstico
             </button>
           </div>
 
         </div>
 
         <div style={{ borderTop: "1px solid var(--border-glass)", paddingTop: "20px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "12px", fontSize: "0.82rem", color: "var(--text-dim)" }}>
-          <span>© {new Date().getFullYear()} DS IA — Digital Strategy & Artificial Intelligence. Todos os direitos reservados.</span>
+          <span>© {new Date().getFullYear()} Dendê IA. Todos os direitos reservados.</span>
           <span>Desenvolvido com tecnologia de alta performance e otimização para IAs.</span>
         </div>
 

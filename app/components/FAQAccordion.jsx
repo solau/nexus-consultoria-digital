@@ -7,7 +7,7 @@ export default function FAQAccordion() {
   const faqs = [
     {
       question: "AIO substitui o SEO tradicional?",
-      answer: "Não — os dois são complementares. Um site bem otimizado para SEO já tem parte da base para AIO. A diferença está em como o conteúdo é estruturado e sinalizado para que IAs o reconheçam como fonte confiável, e não apenas como uma página ranqueável. SEO posiciona você em listas de links; AIO faz você ser citado diretamente nas respostas."
+      answer: "Não. Os dois formatos são perfeitamente complementares. Um site bem otimizado para SEO já tem parte da base para AIO. A diferença central está em como o conteúdo é estruturado e sinalizado para que as IAs o reconheçam como fonte confiável, e não apenas como uma página para ranquear. O SEO tradicional posiciona você em listas de links; o AIO faz você ser citado diretamente nas respostas prontas."
     },
     {
       question: "Quanto tempo leva para aparecer nas respostas das IAs?",
@@ -15,7 +15,7 @@ export default function FAQAccordion() {
     },
     {
       question: "Preciso refazer todo o meu site?",
-      answer: "Na maioria dos casos, não. Trabalhamos sobre o que já existe — reestruturando conteúdo, adicionando marcações técnicas e ajustando a arquitetura de informação. O objetivo é amplificar o que já funciona, não começar do zero."
+      answer: "Na maioria dos casos, não é preciso reconstruir o site. Nós trabalhamos sobre o que já existe. Reestruturamos o conteúdo, adicionamos marcações técnicas invisíveis e ajustamos a arquitetura de informação. Nosso objetivo é amplificar o que já funciona e não começar um projeto totalmente do zero."
     },
     {
       question: "Como vou saber se estou sendo citado pelas IAs?",

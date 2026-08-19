@@ -19,7 +19,7 @@ export default function AioContactForm() {
           <div style={{ paddingRight: '40px' }}>
             <h2 style={{ fontSize: '2.5rem', marginBottom: '24px' }}>Pronto para aparecer nas respostas das IAs?</h2>
             <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: 'var(--text-muted)', marginBottom: '24px' }}>
-              Na conversa inicial, auditamos a presença da sua empresa nas principais IAs generativas e mostramos concretamente onde estão os gaps — quais perguntas do seu mercado você não está respondendo, e o que fazer primeiro.
+              Na conversa inicial, auditamos a presença da sua empresa nas principais IAs generativas e mostramos concretamente onde estão os gaps de mercado. Identificamos quais perguntas vitais você não está respondendo e determinamos o que deve ser feito primeiro.
             </p>
             <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: 'var(--text-muted)' }}>
               Você sai com um diagnóstico claro, sem compromisso.

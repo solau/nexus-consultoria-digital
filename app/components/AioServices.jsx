@@ -4,7 +4,7 @@ export default function AioServices() {
   const services = [
     {
       title: "Auditoria e diagnóstico",
-      desc: "Analisamos como sua marca, produtos e serviços aparecem — ou não aparecem — nas respostas de IAs generativas como ChatGPT, Perplexity e Google AI Overviews. Mapeamos as lacunas de visibilidade."
+      desc: "Analisamos como sua marca, produtos e serviços aparecem nas respostas de IAs generativas como ChatGPT, Perplexity e Google AI Overviews. Mapeamos todas as lacunas de visibilidade atuais."
     },
     {
       title: "Estruturação de conteúdo",
