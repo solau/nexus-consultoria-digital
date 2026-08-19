@@ -12,7 +12,7 @@ export default function AioToolsCta({ onOpenModal }) {
               Analisamos critérios técnicos e de conteúdo e geramos um diagnóstico do seu AIO Score de como seu site aparece para o ChatGPT, Perplexity e Google AI.
             </p>
             <button onClick={onOpenModal} className="btn-dende" style={{ alignSelf: 'flex-start' }}>
-              Gerar meu AIO Score →
+              Gerar meu AIO Score
             </button>
           </div>
 
@@ -22,7 +22,7 @@ export default function AioToolsCta({ onOpenModal }) {
               Aprenda o que é AIO, como as IAs decidem o que citar e o que fazer para sua empresa aparecer nas respostas com a nossa equipe de especialistas.
             </p>
             <button onClick={onOpenModal} className="btn-outline" style={{ alignSelf: 'flex-start' }}>
-              Falar com um Consultor →
+              Falar com um Consultor
             </button>
           </div>
 

@@ -29,9 +29,10 @@ export default function Navbar({ onOpenModal }) {
             height: "42px",
             borderRadius: "12px",
             overflow: "hidden",
-            boxShadow: "0 4px 15px rgba(245, 166, 35, 0.15)"
+            boxShadow: "0 4px 15px rgba(245, 166, 35, 0.15)",
+            position: "relative"
           }}>
-            <img src="/logo.jpg" alt="Dendê IA Logo" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            <Image src="/logo.jpg" alt="Dendê IA Logo" fill style={{ objectFit: "cover" }} />
           </div>
           <div>
             <span style={{ fontSize: "1.45rem", fontWeight: "900", color: "var(--text-main)", letterSpacing: "-0.03em" }}>

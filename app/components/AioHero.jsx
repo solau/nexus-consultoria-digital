@@ -11,6 +11,7 @@ export default function AioHero({ onOpenModal }) {
           <div className="badge-dende">AIO Optimization</div>
           <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '24px', lineHeight: '1.1' }}>
             Prepare seu negócio para ser encontrado e citado pelas IAs <span className="dende-text">e não apenas pelo Google</span>
+          </h1>
           <h2 style={{ fontSize: '1.25rem', color: 'var(--text-muted)', marginBottom: '40px', fontWeight: '400', lineHeight: '1.6' }}>
             63% dos brasileiros já usaram IA generativa e 51% acreditam que ela toma decisões melhores que seres humanos em certas situações. ChatGPT, Perplexity, Google AI Overviews e Gemini entregam respostas diretas. Se a sua empresa não aparece nessas respostas, você está invisível para os seus clientes mais qualificados.
           </h2>

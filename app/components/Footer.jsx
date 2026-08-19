@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Footer({ onOpenModal }) {
   return (
     <footer style={{ background: "var(--bg-card)", borderTop: "1px solid var(--border-glass)", padding: "48px 0 28px 0" }}>
@@ -9,8 +11,8 @@ export default function Footer({ onOpenModal }) {
           
           <div>
             <a href="#" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none", marginBottom: "14px" }}>
-              <div style={{ width: "36px", height: "36px", borderRadius: "10px", overflow: "hidden" }}>
-                <img src="/logo.jpg" alt="Dendê IA Logo" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <div style={{ width: "36px", height: "36px", borderRadius: "10px", overflow: "hidden", position: "relative" }}>
+                <Image src="/logo.jpg" alt="Dendê IA Logo" fill style={{ objectFit: "cover" }} />
               </div>
               <span style={{ fontSize: "1.3rem", fontWeight: "900", color: "var(--text-main)" }}>
                 Dendê <span className="dende-text">IA</span>
